@@ -24,7 +24,7 @@ if(!isset($_GET['pdf'])) {
         
 	} else {
 
-	$new = 1 + $count;
+	$new = 1 + (int)$count;
 
     //update new count
 	$ssl = "UPDATE pdf SET `dwnld` = '$new' WHERE `pedia` = '$data'";

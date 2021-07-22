@@ -466,7 +466,7 @@ if(isset($_POST['donatenow'])) {
 
 		$row = mysqli_fetch_array($rsl);
 		
-			$target_dir = "../pdfs/";
+			$target_dir = "pdfs/";
 			$target_file =  basename($_FILES["pdffile"]["name"]);
 			$targetFilePath = $target_dir . $target_file;
 			$uploadOk = 1;
@@ -496,18 +496,16 @@ if(isset($_POST['donatenow'])) {
 		$_SESSION['uploaded'] = "Your PDF was approved and uploaded successfully";
 
 		echo 'Loading...Please Wait!';
-		echo '<script>window.location.href ="./pdf"</script>';
+		echo '<script>window.location.href ="./pdf#latest"</script>';
 
 	} else {
 
 		//disapprove pdf
-		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `date`, `approve`, `earn`, `pedia`, `filer`)";
-		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', '$date', 'No', '2', '$pedia', '$target_file')";
+		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `approve`, `earn`, `pedia`, `filer`)";
+		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', 'No', '2', '$pedia', '$target_file')";
 		$result = query($ssl);
 
-		$_SESSION['uploaded'] = "Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.";
-		
-		echo 'Loading...Please Wait!';
+		echo validator("Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
 		//echo '<script>window.location.href ="./profile"</script>';
 	}
 
