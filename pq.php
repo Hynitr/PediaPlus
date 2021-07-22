@@ -3,9 +3,9 @@
 <html lang="en">
 
 <head>
-    <title>DotPedia | Download PDF's</title>
-    <meta name="description" content="DotPedia | Download PDF's">
-    <meta name="keywords" content="DotPedia, Download Pdf">
+    <title>DotPedia | Past Questions</title>
+    <meta name="description" content="DotPedia | Past Questions">
+    <meta name="keywords" content="DotPedia, Past Questions">
     <meta property="og:title" content="DotPedia" />
     <meta property="og:image" content="images/ico.png" />
     <meta property="og:url" content="https://dotpedia.com.ng" />
@@ -23,7 +23,7 @@
                         <div class="col-md-10 text-center">
                             <h1 data-aos="fade-up" class="mb-5 font-weight-bold text-head"><span
                                     style="background: #FFE9E6; color: #ff0000; border-radius: 0px 20px 0px 20px;"
-                                    class="typed-words"></span> PDF's</h1>
+                                    class="typed-words"></span> <br />Past Questions</h1>
 
 
                         </div>
@@ -45,7 +45,8 @@
                         <div class="row">
 
                             <div class="col-sm-12">
-                                <label><b style="color: #ff0000; font-size: 18px;" class="font-weight-bold">Search PDF
+                                <label><b style="color: #ff0000; font-size: 18px;" class="font-weight-bold">Search Past
+                                        Questions
                                         .:</b></label>
                                 <div class="form-group">
 
@@ -61,7 +62,7 @@
                                 <div class="form-group">
                                     <select class="form-control" id="inst">
                                         <?php
-                                    $gt = "SELECT * FROM pdf WHERE `approve` = 'Yes' GROUP BY `inst`";
+                                    $gt = "SELECT * FROM pq WHERE `approve` = 'Yes' GROUP BY `inst`";
                                     $rt = query($gt);
                                     
                                     while($rw = mysqli_fetch_array($rt)) {
@@ -83,7 +84,7 @@
                                     <select name="fcg" id="fcg" class="form-control" required>
 
                                         <?php
-                                    $gt = "SELECT * FROM pdf WHERE `approve` = 'Yes' GROUP BY `fcg`";
+                                    $gt = "SELECT * FROM pq WHERE `approve` = 'Yes' GROUP BY `fcg`";
                                     $rt = query($gt);
                                     
                                     while($rw = mysqli_fetch_array($rt)) {
@@ -103,7 +104,7 @@
                                 <div class="form-group">
                                     <select name="dept" id="dept" class="form-control" required>
                                         <?php
-                                    $gt = "SELECT * FROM pdf WHERE `approve` = 'Yes' GROUP BY `dept`";
+                                    $gt = "SELECT * FROM pq WHERE `approve` = 'Yes' GROUP BY `dept`";
                                     $rt = query($gt);
                                     
                                     while($rw = mysqli_fetch_array($rt)) {
@@ -123,7 +124,7 @@
                                 <div class="form-group">
                                     <select id="level" class="form-control" required>
                                         <?php
-                                    $gt = "SELECT * FROM pdf WHERE `approve` = 'Yes' GROUP BY `level`";
+                                    $gt = "SELECT * FROM pq WHERE `approve` = 'Yes' GROUP BY `level`";
                                     $rt = query($gt);
                                     
                                     while($rw = mysqli_fetch_array($rt)) {
@@ -141,7 +142,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-12 mt-4">
-                                        <button id="filterr" style="width: 100%; background: #FFE9E6; color: #ff0000;"
+                                        <button id="pqfilterr" style="width: 100%; background: #FFE9E6; color: #ff0000;"
                                             type="button" class="btn btn-md ">APPLY</button><br />
                                     </div>
 
@@ -168,11 +169,11 @@
 
                 <div class="col-md-12">
 
-                    <h2 style="color: #ff0000" class="mb-4"><b>Most Downloaded PDF(s) </b></h2>
+                    <h2 style="color: #ff0000" class="mb-4"><b>Most Downloaded PQ(s) </b></h2>
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-    $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY id desc";
+    $ssl = "SELECT * FROM pq WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY id desc";
     $rls = query($ssl); 
 
     while($row = mysqli_fetch_array($rls)) {
@@ -234,11 +235,11 @@
 
                 <div class="col-md-12">
 
-                    <h2 style="color: #ff0000" class="mb-4"><b>Latest PDF(s) </b></h2>
+                    <h2 style="color: #ff0000" class="mb-4"><b>Latest Past Question(s) </b></h2>
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-                        $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' ORDER BY id desc";
+                        $ssl = "SELECT * FROM pq WHERE `approve` = 'Yes' ORDER BY id desc";
                         $rls = query($ssl); 
 
                         while($row = mysqli_fetch_array($rls)) {

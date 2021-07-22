@@ -1,0 +1,17 @@
+ErrorDocument 404 /opps.php
+ErrorDocument 403 /opps.php
+ErrorDocument 500 /opps.php
+
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L] 
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^deguidelightschool\.cbt [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://deguidelightschool.cbt/$1 [R,L]

@@ -77,6 +77,24 @@ if(isset($_SESSION['login'])) {
                         </div>
 
                         <div class="row form-group">
+                            <div class="col-md-12 mt-4">
+                                <label for="subject">Referral Code</label>
+                                <?php 
+                                if(isset($_GET['link'])) {
+
+                                    $ref = clean(escape($_GET['link']));
+
+                                    echo '<input type="text" id="ref" class="form-control" value="'.$ref.'" placeholder="Type a referral code" disabled>';
+                                } else {
+
+                                    echo '<input type="text" id="ref" class="form-control" placeholder="Type a referral code">';
+                                }
+                                ?>
+
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
                             <div class="col-md-6 mt-4">
                                 <label for="pword">Create a password</label>
                                 <input type="password" id="pword" class="form-control" placeholder="Create a password">

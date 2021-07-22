@@ -8,6 +8,7 @@ $(document).ready(function () {
     var user = $("#usname").val();
     var pword = $("#pword").val();
     var cpword = $("#cpword").val();
+    var ref    = $("#ref").val();
 
     if (fname == "" || fname == null) {
       $("#msg").html("Input your full name please");
@@ -46,6 +47,7 @@ $(document).ready(function () {
                         pword: pword,
                         cpword: cpword,
                         inst: inst,
+                        ref:ref,
                       },
                       success: function (data) {
                         $("#msg").html(data);
@@ -61,9 +63,6 @@ $(document).ready(function () {
     }
     $("#exampleModalCenter").modal();
   });
-
-
-
 
   //signin
   $("#signin").click(function () {
@@ -172,7 +171,6 @@ $(document).ready(function () {
     }
   });
 
-
   /** COPY REFERRAL LINK TO CLIPBOARD */
   $("#copy").click(function () {
     $("#copy").text("Copied!");
@@ -181,9 +179,6 @@ $(document).ready(function () {
       $("#copy").text("Copy Referral Link");
     });
   });
-
-
-
 
   /** DONATE PDFs **/
   $("#donatenow").click(function () {
@@ -206,8 +201,9 @@ $(document).ready(function () {
           if (dept == "" || dept == null) {
             $("#dntmsg").html("Kindly input the PDF Department");
           } else {
-
-           $("#dntmsg").html("Loading.. Make sure you have a strong internet connection");
+            $("#dntmsg").html(
+              "Loading.. Make sure you have a strong internet connection"
+            );
 
             $.ajax({
               type: "post",
@@ -227,11 +223,10 @@ $(document).ready(function () {
           }
         }
       }
-  }
+    }
 
     $("#donateModalCenter").modal();
   });
-
 
   /** UPLOAD PDF FILE
   $("#donatnow").click(function () {
@@ -251,23 +246,29 @@ $(document).ready(function () {
     $("#donateModalCenter").modal();
   });**/
 
-
   /** SEARCH FILTER */
   $("#filter").click(function () {
-
     var inst = $("#inst").val();
     var fcg = $("#fcg").val();
     var dept = $("#dept").val();
     var level = $("#level").val();
     var srctxt = $("#srctxt").val();
 
-    window.location.href = "./search?txt=" + srctxt + "&inst=" + inst + "&fcg=" + fcg + "&dept=" + dept + "&level=" + level;
-  })
-
+    window.location.href =
+      "./search?txt=" +
+      srctxt +
+      "&inst=" +
+      inst +
+      "&fcg=" +
+      fcg +
+      "&dept=" +
+      dept +
+      "&level=" +
+      level;
+  });
 
   /** SEARCH FILTER ADVANCED */
-  $("#filterr").click(function () {
-
+  $("#pqfilterr").click(function () {
     var inst = $("#inst").val();
     var fcg = $("#fcg").val();
     var dept = $("#dept").val();
@@ -276,23 +277,78 @@ $(document).ready(function () {
 
     //window.location.href = "./search?txt=" + srctxt + "&inst=" + inst + "&fcg=" + fcg + "&dept=" + dept + "&level=" + level;
 
-    var xhr = new  XMLHttpRequest();
-    document.getElementById('resl').innerHTML = "<span style='color: #ff0000; text-align: center;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading.. Please wait!</span>";
-    
-    xhr.open('GET', './searchresult?txt=' + srctxt + '&inst=' + inst + '&fcg=' + fcg + '&dept=' + dept + '&level=' + level, true);
+    var xhr = new XMLHttpRequest();
+    document.getElementById("resl").innerHTML =
+      "<span style='color: #ff0000; text-align: center;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading.. Please wait!</span>";
 
-    xhr.onload = function ()
-    {
+    xhr.open(
+      "GET",
+      "./searchresult?txt=" +
+        srctxt +
+        "&inst=" +
+        inst +
+        "&fcg=" +
+        fcg +
+        "&dept=" +
+        dept +
+        "&level=" +
+        level,
+      true
+    );
+
+    xhr.onload = function () {
       if (xhr.status == 200) {
         //document.write(this.responseText);
-        document.getElementById('resl').innerHTML= xhr.responseText;
+        document.getElementById("resl").innerHTML = xhr.responseText;
       } else {
-
-        document.getElementById('resl').innerHTML = "<span style='color: #ff0000'>Error loading document. <br/> Kindly try again later!</span>";
+        document.getElementById("resl").innerHTML =
+          "<span style='color: #ff0000'>Error loading document. <br/> Kindly try again later!</span>";
       }
-    }
+    };
 
     xhr.send();
-           
-  })
+  });
+
+
+  /** SEARCH FILTER ADVANCED */
+  $("#filterr").click(function () {
+    var inst = $("#inst").val();
+    var fcg = $("#fcg").val();
+    var dept = $("#dept").val();
+    var level = $("#level").val();
+    var srctxt = $("#srctxt").val();
+
+    //window.location.href = "./search?txt=" + srctxt + "&inst=" + inst + "&fcg=" + fcg + "&dept=" + dept + "&level=" + level;
+
+    var xhr = new XMLHttpRequest();
+    document.getElementById("resl").innerHTML =
+      "<span style='color: #ff0000; text-align: center;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading.. Please wait!</span>";
+
+    xhr.open(
+      "GET",
+      "./pqsearchresult?txt=" +
+        srctxt +
+        "&inst=" +
+        inst +
+        "&fcg=" +
+        fcg +
+        "&dept=" +
+        dept +
+        "&level=" +
+        level,
+      true
+    );
+
+    xhr.onload = function () {
+      if (xhr.status == 200) {
+        //document.write(this.responseText);
+        document.getElementById("resl").innerHTML = xhr.responseText;
+      } else {
+        document.getElementById("resl").innerHTML =
+          "<span style='color: #ff0000'>Error loading document. <br/> Kindly try again later!</span>";
+      }
+    };
+
+    xhr.send();
+  });
 });

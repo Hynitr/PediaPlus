@@ -68,7 +68,7 @@
                                    <li><a href="./pdf"><span><b>PDF(s)</b></span></a></li>
                                    <li><a href="./pq"><span><b>Past Questions</b></span></a></li>
                                    <li><a href="./tutors"><span><b>Tutors</b></span></a></li>
-                                   <li><a href="./business"><span><b>Business</b></span></a></li>
+                                   <li><a href="./cbt"><span><b>CBT</b></span></a></li>
                                    <?php
                                    if(isset($_SESSION['login'])) {
                                        echo '<li><a style="color: #000;" href="./profile"><span><b>My Profile</b></span></a></li>';

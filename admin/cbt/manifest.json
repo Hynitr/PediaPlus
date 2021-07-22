@@ -1,0 +1,22 @@
+{
+  "short_name": "DAMIS CBT",
+  "name": "DAMIS CBT",
+  "description": "CBT Software",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "./?v3&utm_source=web_app_manifest",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "color": "#000000",
+  "display": "standalone",
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://icbt.deguidelightschool.com.ng"
+  }]
+}
