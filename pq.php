@@ -277,7 +277,7 @@
 
 
                                     <div class="col-md-12 ">
-                                        <a href="./preview?pdf=<?php echo $row['preview'] ?>"><input
+                                        <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><input
                                                 style="width: 100%; background: #FFE9E6; color: #ff0000;" type="submit"
                                                 value="Preview/Download" class="btn btn-pill btn-md "></a><br />
                                     </div>

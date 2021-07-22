@@ -85,6 +85,9 @@ if(!isset($_SESSION['login'])) {
                         <p class="mb-0 font-weight-bold">Email</p>
                         <p class="mb-4"><?php echo $row['email'] ?></a></p>
 
+                        <p class="mb-0 font-weight-bold">Referred By;</p>
+                        <p class="mb-4"><?php echo $row['ref'] ?></a></p>
+
                         <div class="col-md-12 ">
                             <input style="width: 100%; background: #FFE9E6; color: #ff0000;" type="submit"
                                 value="Update Profile Picture" class="btn btn-pill btn-md " data-toggle="modal"
@@ -135,8 +138,8 @@ if(!isset($_SESSION['login'])) {
                         <p class="mb-0 font-weight-bold">Earn Much More</p>
                         <p class="mb-4"><a data-toggle="modal" data-target="#refLink" href="#"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Become a
-                                    Tutor</span></a> &nbsp; | &nbsp; <a data-toggle="modal" data-target="#refLink"
-                                href="#" class="d-inline-flex align-items-center block-service-1-more"><span> 0 Uploaded
+                                    Tutor</span></a> &nbsp; | &nbsp; <a href="./uplpq"
+                                class="d-inline-flex align-items-center block-service-1-more"><span> 0 Uploaded
                                     PQs</span></a>
 
                         </p>
@@ -186,7 +189,7 @@ if(!isset($_SESSION['login'])) {
 
 
                             <div class="col-md-12 mb-3 mb-md-4">
-                                <label class="text-black font0-weight-bold" for="lname">Faculty/College</label>
+                                <label class="text-black font-weight-bold" for="lname">Faculty/College</label>
                                 <input type="text" id="fcg" name="fcg"
                                     placeholder="e.g Faculty of Engineering, College of Science" class="form-control"
                                     required>
@@ -217,7 +220,7 @@ if(!isset($_SESSION['login'])) {
 
 
                             <div class="col-md-12 mb-3 mb-md-4">
-                                <label class="text-black font-weight-bold" for="title">Select File</label>
+                                <label class="text-black font-weight-bold" for="title">Select PDF File</label>
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" name="pdffile" id="pdffile" required>
                                     <label class="custom-file-label" for="customFile">Choose file</label>
@@ -279,7 +282,6 @@ if(!isset($_SESSION['login'])) {
             </div>
         </div>
     </div>
-
 
 
     <!-- SHARE REFERAL LINK -->

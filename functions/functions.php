@@ -514,4 +514,83 @@ if(isset($_POST['donatenow'])) {
 }
 }
 }
+
+
+/** UPLOAD PQ */
+function uploadpq() {
+	
+
+	if(isset($_POST['pqupl'])) {
+	
+		$inst 	= $_POST['inst'];
+		$typ 	= $_POST['typ'];
+		$title 	= $_POST['title'];
+		$fcg	= $_POST['fcg'];
+		$dept   = $_POST['dept'];
+		$level  = $_POST['level'];
+	
+		$upl    = $_SESSION['login'];
+	
+		$pedia  = "pedia".rand(0, 9999);
+	
+		//check if the uploader is verified
+		$sql = "SELECT * FROM signup WHERE `usname` = '$upl'";
+		$rsl = query($sql);
+	
+		if(row_count($rsl) == '') {
+	
+			redirect("./signup");
+			
+		} else {
+	
+			$row = mysqli_fetch_array($rsl);
+			
+				$target_dir = "pqs/";
+				$target_file =  basename($_FILES["pdffile"]["name"]);
+				$targetFilePath = $target_dir . $target_file;
+				$uploadOk = 1;
+				$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+			
+				   
+				// Allow certain file formats
+				if($imageFileType != "pdf") {
+					echo validator("Sorry, only .pdf file format is allowed");
+					$uploadOk = 0;
+				} else {
+				// Check if $uploadOk is set to 0 by an error
+				if ($uploadOk == 0) {
+				   echo validator("Sorry, your file was not uploaded.");
+				// if everything is ok, try to upload file
+				} else {
+				   
+				   move_uploaded_file($_FILES["pdffile"]["tmp_name"], $targetFilePath);
+		
+		if($row['vrf'] == 'Yes') {
+					
+			//approve PDF and upload details
+			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '2', '$pedia', '$target_file')";
+			$result = query($ssl);
+	
+			$_SESSION['uploaded'] = "Your PDF was approved and uploaded successfully";
+	
+			echo 'Loading...Please Wait!';
+			echo '<script>window.location.href ="./pq#latest"</script>';
+	
+		} else {
+	
+			//disapprove pdf
+			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `approve`, `earn`, `pedia`, `filer`)";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', 'No', '2', '$pedia', '$target_file')";
+			$result = query($ssl);
+	
+			echo validator("Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
+			//echo '<script>window.location.href ="./profile"</script>';
+		}
+	
+	}
+	}
+	}
+	}
+	}
 ?>

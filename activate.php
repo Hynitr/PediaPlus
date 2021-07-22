@@ -31,7 +31,7 @@ if(!isset($_GET['vef'])) {
     }
    
     //update active to 1
-    $ssl = "UPDATE signup SET `active` = '1', `activator` = '', `pdfcredit` = '1', `withdraw` = '0' WHERE `activator` = '$data'";
+    $ssl = "UPDATE signup SET `active` = '$cred', `activator` = '', `pdfcredit` = '1', `withdraw` = '0' WHERE `activator` = '$data'";
     $res = query($ssl);
 
     } else {

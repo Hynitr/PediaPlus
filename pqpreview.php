@@ -24,7 +24,7 @@ if(!isset($_GET['pdf'])) {
         
 	} else {
 
-	$new = 1 + $count;
+	$new = 1 + (int)$count;
 
     //update new count
 	$ssl = "UPDATE pq SET `dwnld` = '$new' WHERE `pedia` = '$data'";
@@ -75,7 +75,7 @@ if(!isset($_GET['pdf'])) {
                 <div class="row col-lg-12">
 
                     <iframe style="width: 100%; height: 100vh; border:none"
-                        src="pdfs/<?php echo $row['filer'] ?>"></iframe>
+                        src="pqs/<?php echo $row['filer'] ?>"></iframe>
                 </div>
             </div>
         </div>
