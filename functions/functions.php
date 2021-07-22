@@ -113,7 +113,7 @@ function username_exist($usname) {
 
 /** VALIDATE USER REGISTRATION **/
 
-if(isset($_POST['fname']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['pword']) && isset($_POST['cpword']) && isset($_POST['inst'])) {
+if(isset($_POST['fname']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['pword']) && isset($_POST['cpword']) && isset($_POST['inst']) && isset($_POST['ref'])) {
 
 $fname 			= clean($_POST['fname']);
 $tel	 		= clean($_POST['tel']);
@@ -122,6 +122,7 @@ $uname	 		= clean($_POST['user']);
 $pword    		= clean($_POST['pword']);
 $cpword 		= clean($_POST['cpword']);
 $inst			= clean($_POST['inst']);
+$ref            = clean(escape($_POST['ref']));
 
 if(email_exist($email)) {
 
@@ -139,7 +140,7 @@ if($pword != $cpword) {
 			echo "Password doesn`t match!";
 			
 		} else {
-			register($fname, $tel, $email, $uname, $pword, $inst);
+			register($fname, $tel, $email, $uname, $pword, $inst, $ref);
 		}
 	}
 	}
@@ -149,7 +150,7 @@ if($pword != $cpword) {
 	
 
 /** REGISTER USER **/
-function register($fname, $tel, $email, $uname, $pword, $inst) {
+function register($fname, $tel, $email, $uname, $pword, $inst, $ref) {
 
 	$fnam = escape($fname);
 	$emai = escape($email);
@@ -161,8 +162,8 @@ function register($fname, $tel, $email, $uname, $pword, $inst) {
 
 	$activator = token_generator();
 	
-$sql = "INSERT INTO signup(`id`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `activator`, `vrf`)";
-$sql.= " VALUES('1', '$fnam', '$unam', '$emai', '$pwor', '$datereg', '0', '$tel', '$inst', '$activator', 'No')";
+$sql = "INSERT INTO signup(`id`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `activator`, `vrf`, `referal`)";
+$sql.= " VALUES('1', '$fnam', '$unam', '$emai', '$pwor', '$datereg', '0', '$tel', '$inst', '$activator', 'No', '$ref')";
 $result = query($sql);
 
 //redirect to verify function

@@ -19,9 +19,19 @@ if(!isset($_GET['vef'])) {
     $row = mysqli_fetch_array($rsl);
 
     $fnam = $row['usname'];
+    $ref  = $row['ref'];
+
+    if($ref == "seyibabs" || $ref == "smilegist") {
+
+        $cred = 100;
+
+    } else {
+
+        $cred = 5;
+    }
    
     //update active to 1
-    $ssl = "UPDATE `signup` SET `active` = '1', `activator` = '', `pdfcredit` = '5', `point` = '0', `withdraw` = '0' WHERE `activator` = '$data'";
+    $ssl = "UPDATE `signup` SET `active` = '1', `activator` = '', `pdfcredit` = '$cred', `point` = '0', `withdraw` = '0' WHERE `activator` = '$data'";
     $res = query($ssl);
 
     } else {
