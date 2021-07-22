@@ -1,4 +1,9 @@
-<?php include("functions/init.php");?>
+<?php include("functions/init.php");
+if(!isset($_SESSION['login'])) {
+
+    redirect("./signin");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

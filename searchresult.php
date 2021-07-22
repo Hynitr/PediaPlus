@@ -104,7 +104,7 @@ $rsl = query($sql);
 
 while($row = mysqli_fetch_array($rsl)) {
 ?>
-                    <li class="mb-2"><a href="./pq?txt=<?php echo $row['filer'] ?>"><?php echo $row['title'] ?></a>
+                    <li class="mb-2"><a href="./pqpreview?=<?php echo $row['pedia'] ?>"><?php echo $row['title'] ?></a>
                     </li>
                     <?php
 }
@@ -121,7 +121,8 @@ while($row = mysqli_fetch_array($rsl)) {
      
      while($row = mysqli_fetch_array($rsl)) {
     ?>
-                    <li class="mb-2"><a href="./tutors?txt=<?php echo $row['filer'] ?>"><?php echo $row['title'] ?></a>
+                    <li class="mb-2"><a
+                            href="./tutors?profile=<?php echo $row['user'] ?>"><?php echo $row['title'] ?></a>
                     </li>
                     <?php
         }

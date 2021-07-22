@@ -105,9 +105,18 @@ if(!isset($_SESSION['login'])) {
                         <?php      
                         $user = $_SESSION['login'];
                         
+                        //add earn from pdf upload
                         $stl = "SELECT sum(sn) AS total, sum(earn) AS earning FROM pdf  WHERE `upld` = '$user'";
                         $rtl = query($stl); 
                         $rtw = mysqli_fetch_array($rtl);
+
+                        //add earn from past questions uploads
+                        $swl = "SELECT sum(sn) AS pqtotal, sum(earn) AS pqearning FROM pq WHERE `upld` = '$user'";
+                        $rwl = query($swl); 
+                        $rww = mysqli_fetch_array($rwl);
+
+                        $a = $rtw['earning'] + $rww['pqearning'];
+                        
 
                         ?>
 
@@ -119,7 +128,7 @@ if(!isset($_SESSION['login'])) {
                                 <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
                         <p class="mb-0 font-weight-bold">Total Earnings</p>
-                        <p class="mb-4">NGN <?php echo number_format($rtw['earning']) ?></a> - <a href="#"
+                        <p class="mb-4">NGN <?php echo number_format($a) ?></a> - <a href="#"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Withdraw
                                     Funds</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
@@ -139,7 +148,8 @@ if(!isset($_SESSION['login'])) {
                         <p class="mb-4"><a data-toggle="modal" data-target="#refLink" href="#"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Become a
                                     Tutor</span></a> &nbsp; | &nbsp; <a href="./uplpq"
-                                class="d-inline-flex align-items-center block-service-1-more"><span> 0 Uploaded
+                                class="d-inline-flex align-items-center block-service-1-more"><span>
+                                    <?php echo number_format($rww['pqtotal']) ?> Uploaded
                                     PQs</span></a>
 
                         </p>

@@ -30,6 +30,24 @@ if(!isset($_GET['pdf'])) {
 	$ssl = "UPDATE pq SET `dwnld` = '$new' WHERE `pedia` = '$data'";
 	$rsl = query($ssl);
 
+
+    //deduct pdf credit
+    $user = $_SESSION['login'];
+    
+    $dds = "SELECT * FROM signup WHERE `usname` = '$user'";
+    $rds = query($dds);
+
+    $dws = mysqli_fetch_array($rds);
+
+    $pdd = $dws['pdfcredit'];
+
+    $a = 1 - (int)$pdd;
+
+    $pds = "UPDATE signup SET `pdfcredit` = '$a' WHERE `usname` = '$user'";
+    $psl = query($pds);
+
+    
+
 	}
 
 

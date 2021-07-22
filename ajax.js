@@ -283,7 +283,7 @@ $(document).ready(function () {
 
     xhr.open(
       "GET",
-      "./searchresult?txt=" +
+      "./pqsearchresult?txt=" +
         srctxt +
         "&inst=" +
         inst +
@@ -326,7 +326,7 @@ $(document).ready(function () {
 
     xhr.open(
       "GET",
-      "./pqsearchresult?txt=" +
+      "./searchresult?txt=" +
         srctxt +
         "&inst=" +
         inst +
