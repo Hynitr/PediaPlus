@@ -23,15 +23,15 @@ if(!isset($_GET['vef'])) {
 
     if($ref == "seyibabs" || $ref == "smilegist") {
 
-        $cred = 100;
+        $cred = '100';
 
     } else {
 
-        $cred = 5;
+        $cred = '5';
     }
    
     //update active to 1
-    $ssl = "UPDATE `signup` SET `active` = '1', `activator` = '', `pdfcredit` = '$cred', `point` = '0', `withdraw` = '0' WHERE `activator` = '$data'";
+    $ssl = "UPDATE signup SET `active` = '1', `activator` = '', `pdfcredit` = '1', `withdraw` = '0' WHERE `activator` = '$data'";
     $res = query($ssl);
 
     } else {

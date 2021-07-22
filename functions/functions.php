@@ -162,7 +162,7 @@ function register($fname, $tel, $email, $uname, $pword, $inst, $ref) {
 
 	$activator = token_generator();
 	
-$sql = "INSERT INTO signup(`id`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `activator`, `vrf`, `referal`)";
+$sql = "INSERT INTO signup(`id`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `activator`, `vrf`, `ref`)";
 $sql.= " VALUES('1', '$fnam', '$unam', '$emai', '$pwor', '$datereg', '0', '$tel', '$inst', '$activator', 'No', '$ref')";
 $result = query($sql);
 
@@ -245,8 +245,12 @@ $send = mail($to, $subject, $body, $headers);
 
 					$_SESSION['usemail'] = $email;
 
+					//update activation link
+					$ups = "UPDATE signup SET `activator` = '$activator' WHERE `usname` = '$username'";
+					$ues = query($ups);
+
 					//redirect to verify function
-					$subject = "VERIFY YOUR EMAIL";
+					$subj    = "VERIFY YOUR EMAIL";
 					$link 	 = "https://dotpedia.com.ng/./activate?vef=".$activator;
 
 					mail_mailer($email, $activator, $subj, $link);
