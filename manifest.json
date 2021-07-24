@@ -14,7 +14,7 @@
   "background_color": "#FFE9E6",
   "theme_color": "#FFE9E6",
   "color": "#ff0000",
-  "display": "standalone",
+  "display": "minimal-ui",
   "related_applications": [{
     "platform": "web",
     "url": "https://dotpedia.com.ng"
