@@ -9,9 +9,10 @@ if(!isset($_GET['pdf'])) {
     $sql = "SELECT * FROM pq WHERE `pedia` = '$data'";
     $rsl = query($sql);
 
-    if(row_count($rsl) == '') {
+    if(row_count($rsl) == 0) {
         
         redirect("./pdf");
+        
     } else {
 
     $row  = mysqli_fetch_array($rsl);
@@ -22,41 +23,36 @@ if(!isset($_GET['pdf'])) {
 
 		$new = 1;
         
+        
 	} else {
 
 	$new = 1 + (int)$count;
+    }
 
     //update new count
 	$ssl = "UPDATE pq SET `dwnld` = '$new' WHERE `pedia` = '$data'";
 	$rsl = query($ssl);
 
+    //confirm origin first
+    $origin = $row['upld'];
+    $user   = $_SESSION['login'];
 
+    if($origin != $user) {
+
+        
     //deduct pdf credit
-    $user = $_SESSION['login'];
-    
-    $dds = "SELECT * FROM signup WHERE `usname` = '$user'";
-    $rds = query($dds);
-
-    $dws = mysqli_fetch_array($rds);
-
-    $pdd = $dws['pdfcredit'];
-
-    $a = 1 - (int)$pdd;
-
-    $pds = "UPDATE signup SET `pdfcredit` = '$a' WHERE `usname` = '$user'";
-    $psl = query($pds);
+    pqpdfcredit();
+        
+    }
 
     
-
-	}
-
-
 
        
     }
 
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +72,7 @@ if(!isset($_GET['pdf'])) {
                         <div class="col-md-10 text-center">
                             <h1 data-aos="fade-up" class="mb-5 font-weight-bold text-head"><span
                                     style="background: #FFE9E6; color: #ff0000; border-radius: 0px 20px 0px 20px;"
-                                    class="typed-words"></span> PDF's</h1>
+                                    class="typed-words"></span> <br />Past Questions</h1>
 
 
                         </div>

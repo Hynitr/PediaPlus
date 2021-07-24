@@ -9,7 +9,14 @@ if(!isset($_SESSION['login'])) {
     $data = $_SESSION['login'];
     $sql = "SELECT * FROM signup WHERE `usname` = '$data'";
     $rsl = query($sql);
+
+    if(row_count($rsl) == 0) {
+
+        redirect("./logout");
+        
+    } else{
     $row = mysqli_fetch_array($rsl);
+    }
     
 }
 ?>
@@ -116,6 +123,22 @@ if(!isset($_SESSION['login'])) {
                         $rww = mysqli_fetch_array($rwl);
 
                         $a = $rtw['earning'] + $rww['pqearning'];
+
+
+                        //get total referrals
+                        $raf = "SELECT sum(id) AS reftotal FROM signup WHERE `ref` = '$user'";
+                        $ras = query($raf);
+                        
+
+                        if(row_count($ras) == '') {
+                            
+                            $refff = 0;
+                        } else {
+
+                            $rao    = mysqli_fetch_array($ras);
+                            $refff  = number_format($rao['reftotal']); 
+
+                        }
                         
 
                         ?>
@@ -135,9 +158,9 @@ if(!isset($_SESSION['login'])) {
 
 
                         <p class="mb-0 font-weight-bold">Total Referals</p>
-                        <p class="mb-4"><?php echo number_format($row['withdraw']) ?></a> - <a data-toggle="modal"
-                                data-target="#refLink" href="#"
-                                class="d-inline-flex align-items-center block-service-1-more"><span>Share Referal
+                        <p class="mb-4"><?php echo $refff ?></a> - <a data-toggle="modal" data-target="#refLink"
+                                href="#" class="d-inline-flex align-items-center block-service-1-more"><span>Share
+                                    Referal
                                     Link</span>
                                 <span class="icon-keyboard_arrow_right icon"></span></a>
 
@@ -407,6 +430,7 @@ if(!isset($_SESSION['login'])) {
         document.execCommand("copy");
     }
     </script>
+
     </body>
 
 </html>

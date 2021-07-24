@@ -10,10 +10,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#FFE9E6">
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="../images/logo.png" />
-    <link rel="manifest" href="manifest.json">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -36,7 +35,7 @@
     <!--===============================================================================================-->
 </head>
 
-<body>
+<body style="background-color: #FFE9E6">
 
 
     <div class="container-contact100">
@@ -55,7 +54,8 @@
 $sql = "SHOW TABLES";
 $result = query($sql);
 while ($row = mysqli_fetch_row($result)) {
-  if($row[0] == "login" || $row[0] == "timer") {
+  if($row[0] == "login" || $row[0] == "timer" || $row[0] == "signup" || $row[0] == "tutors" || $row[0] == "pq" || $row[0] == "pdf" 
+  || $row[0] == "result") {
     echo '
     		<span class="contact100-form-title text-danger">
 					No Exam to take 
@@ -71,7 +71,8 @@ while ($row = mysqli_fetch_row($result)) {
 $sql = "SHOW TABLES";
 $result = query($sql);
 while ($row = mysqli_fetch_row($result)) {
-  if($row[0] == "login" || $row[0] == "timer" || $row[0] == "result") {
+  if($row[0] == "login" || $row[0] == "timer" || $row[0] == "signup" || $row[0] == "tutors" || $row[0] == "pq" || $row[0] == "pdf" 
+  || $row[0] == "result") {
     echo '
             ';
   } else {
@@ -83,7 +84,8 @@ while ($row = mysqli_fetch_row($result)) {
 ?>
                 </select>
                 <br /><br /><br />
-                <button type="button" id="startcbt" class="btn btn-dark">Start CBT</button>
+                <button style="background: #FFE9E6;" type="button" id="startcbt" class="btn">Start CBT</button>
+                <button type="button" id="startcbt" class="btn btn-dark">Take Me Home</button>
 
             </form>
             <?php

@@ -191,8 +191,38 @@ if(!isset($_SESSION['login'])) {
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
                                         <?php echo $row['title']; ?>
                                     </h2>
-                                    <div style="color: #000" class="meta mb-4">Uploaded by <a
-                                            href="#"><?php echo $row['upld'] ?>
+                                    <div style="color: #000" class="meta mb-4">Uploaded by <a href="#"><?php echo $row['upld']; 
+
+//verification tick
+$paa  = $row['upld'];    
+            
+$psql = "SELECT * FROM signup WHERE `usname` = '$paa'";
+$prsl = query($psql); 
+
+//if user account is deleted
+if(row_count($prsl) == 0) {
+    
+//convert user account to default
+$pusl = "UPDATE pq SET `upld` = 'DotPedia' WHERE `upld` = '$paa'";
+$purl = query($pusl);   
+    
+    
+} else {
+
+$pdf = mysqli_fetch_array($prsl);
+
+    
+if($pdf['vrf'] == 'Yes') {
+    echo ' <i style="color: #ff0000" class="icon-check-circle"></i>';
+
+} else {
+
+    echo '';
+}
+
+
+}
+?>
 
 
                                         </a>
@@ -216,7 +246,7 @@ if(!isset($_SESSION['login'])) {
 
 
                                     <div class="col-md-12 ">
-                                        <a href="./preview?pdf=<?php echo $row['pedia'] ?>"><input
+                                        <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><input
                                                 style="width: 100%; background: #FFE9E6; color: #ff0000;" type="submit"
                                                 value="Preview/Download" id="" class="btn btn-pill btn-md "></a><br />
                                     </div>
@@ -244,7 +274,7 @@ if(!isset($_SESSION['login'])) {
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-                        $ssl = "SELECT * FROM pq WHERE `approve` = 'Yes' ORDER BY id desc";
+                        $ssl = "SELECT * FROM pq WHERE `approve` = 'Yes'  AND `dwnld` BETWEEN 0 AND 5 ORDER BY id desc";
                         $rls = query($ssl); 
 
                         while($row = mysqli_fetch_array($rls)) {
@@ -258,7 +288,38 @@ if(!isset($_SESSION['login'])) {
                                         <?php echo $row['title']; ?>
                                     </h2>
                                     <div style="color: #000" class="meta mb-4">Uploaded by <a
-                                            href="./<?php echo $row['upld'] ?>"><?php echo $row['upld'] ?>
+                                            href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
+
+//verification tick
+$paa  = $row['upld'];    
+            
+$psql = "SELECT * FROM signup WHERE `usname` = '$paa'";
+$prsl = query($psql); 
+
+//if user account is deleted
+if(row_count($prsl) == 0) {
+    
+//convert user account to default
+$pusl = "UPDATE pq SET `upld` = 'DotPedia' WHERE `upld` = '$paa'";
+$purl = query($pusl);   
+    
+    
+} else {
+
+$pdf = mysqli_fetch_array($prsl);
+
+    
+if($pdf['vrf'] == 'Yes') {
+    echo ' <i style="color: #ff0000" class="icon-check-circle"></i>';
+
+} else {
+
+    echo '';
+}
+
+
+}
+?>
 
 
                                         </a>

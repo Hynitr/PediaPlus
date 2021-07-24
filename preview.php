@@ -9,9 +9,10 @@ if(!isset($_GET['pdf'])) {
     $sql = "SELECT * FROM pdf WHERE `pedia` = '$data'";
     $rsl = query($sql);
 
-    if(row_count($rsl) == '') {
+    if(row_count($rsl) == 0) {
         
         redirect("./pdf");
+        
     } else {
 
     $row  = mysqli_fetch_array($rsl);
@@ -25,20 +26,17 @@ if(!isset($_GET['pdf'])) {
 	} else {
 
 	$new = 1 + (int)$count;
+    }
 
     //update new count
 	$ssl = "UPDATE pdf SET `dwnld` = '$new' WHERE `pedia` = '$data'";
 	$rsl = query($ssl);
-
-	}
-
-
-
        
     }
 
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

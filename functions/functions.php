@@ -436,6 +436,80 @@ function global_check() {
 }
 
 
+/** DEDUCT PDF CREDIT FOR PQ */
+function pqpdfcredit() {
+
+	$user = $_SESSION['login'];
+    
+    $dds = "SELECT * FROM signup WHERE `usname` = '$user'";
+    $rds = query($dds);
+
+    $dws = mysqli_fetch_array($rds);
+
+    $pdd = $dws['pdfcredit'];
+
+    //check if user have enough pdf credit
+    if($pdd <= 1) {
+
+        //alert
+        echo '<script>
+        if(confirm("You do not have sufficient PDF Credit!")){
+            txt = window.location.href = "./credit";
+        } else {
+            txt = window.location.href = "./credit";
+        }
+        </script>';
+        
+    } else {
+
+    $a = (int)$pdd - 1;
+
+    $pds = "UPDATE signup SET `pdfcredit` = '$a' WHERE `usname` = '$user'";
+    $psl = query($pds);
+
+
+    }
+}
+
+
+
+
+/** DEDUCT PDF CREDIT FOR TAKE A TEST - CBT */
+function cbtpdfcredit() {
+
+	$user = $_SESSION['login'];
+    
+    $dds = "SELECT * FROM signup WHERE `usname` = '$user'";
+    $rds = query($dds);
+
+    $dws = mysqli_fetch_array($rds);
+
+    $pdd = $dws['pdfcredit'];
+
+    //check if user have enough pdf credit
+    if($pdd <= 2) {
+
+        //alert
+        echo '<script>
+        if(confirm("You do not have sufficient PDF Credit!")){
+            txt = window.location.href = "./credit";
+        } else {
+            txt = window.location.href = "./credit";
+        }
+        </script>';
+        
+    } else {
+
+    $a = (int)$pdd - 3;
+
+    $pds = "UPDATE signup SET `pdfcredit` = '$a' WHERE `usname` = '$user'";
+    $psl = query($pds);
+
+	redirect("admin/cbt/");
+    }
+}
+
+
 
 /** UPLOAD PDF */
 function uploadpdf() {

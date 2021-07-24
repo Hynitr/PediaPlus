@@ -55,7 +55,7 @@ $(document).ready(function () {
     if (cbtsbj == "Select Subject") {
       alert("Kindly select a Subject");
     } else {
-      window.location.href = "./instruct?id=" + cbtsbj;
+      window.location.href = "./startcbt?id=" + cbtsbj;
     }
   });
 

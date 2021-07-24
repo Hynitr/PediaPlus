@@ -44,7 +44,38 @@ while($row = mysqli_fetch_array($rsl)) {
                                 <?php echo $row['title']; ?>
                             </h2>
                             <div style="color: #000" class="meta mb-4">Uploaded by <a
-                                    href="./<?php echo $row['upld'] ?>"><?php echo $row['upld'] ?>
+                                    href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
+
+//verification tick
+$paa  = $row['upld'];    
+            
+$psql = "SELECT * FROM signup WHERE `usname` = '$paa'";
+$prsl = query($psql); 
+
+//if user account is deleted
+if(row_count($prsl) == 0) {
+    
+//convert user account to default
+$pusl = "UPDATE pdf SET `upld` = 'DotPedia' WHERE `upld` = '$paa'";
+$purl = query($pusl);   
+    
+    
+} else {
+
+$pdf = mysqli_fetch_array($prsl);
+
+    
+if($pdf['vrf'] == 'Yes') {
+    echo ' <i style="color: #ff0000" class="icon-check-circle"></i>';
+
+} else {
+
+    echo '';
+}
+
+
+}
+?>
 
 
                                 </a>
