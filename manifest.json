@@ -17,6 +17,7 @@
   "display": "minimal-ui",
   "related_applications": [{
     "platform": "web",
+    "orientation": "portrait",
     "url": "https://dotpedia.com.ng"
   }]
 }
