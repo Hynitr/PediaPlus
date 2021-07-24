@@ -1,15 +1,6 @@
 var CACHE_NAME = 'pwgen-cache';
 var urlsToCache = [
-    'index.php',
-    'contact.php',
-    'contacted.php',
-    'verified.php',
-    'verify.php',
-    'okk.php',
-    'ads.php',
-    'css/style.css',
-    'js/main.js',
-    'images/logo.png'
+    'index.php'
 ];
 console.log('loading sw');
 

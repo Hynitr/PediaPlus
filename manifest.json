@@ -1,22 +1,22 @@
 {
-  "short_name": "PediaPlus from DotEightInc",
-  "name": "PediaPlus from DotEightInc",
-  "description": "An online Pdf Bank",
+  "short_name": "DotPedia from DotEightPlus",
+  "name": "DotPedia from DotEightPlus",
+  "description": "An online Acadmic Aid Bank",
   "lang": "en",
   "icons": [
     {
-      "src": "images/icon.png",
+      "src": "images/pwa.png",
       "type": "image/png",
       "sizes": "144x144"
     }
   ],
   "start_url": "./?v3&utm_source=web_app_manifest",
-  "background_color": "#ea728c",
-  "theme_color": "#ea728c",
-  "color": "#ffffff",
+  "background_color": "#FFE9E6",
+  "theme_color": "#FFE9E6",
+  "color": "#ff0000",
   "display": "standalone",
   "related_applications": [{
     "platform": "web",
-    "url": "https://PediaPlus.com.ng"
+    "url": "https://dotpedia.com.ng"
   }]
 }
