@@ -667,4 +667,44 @@ function uploadpq() {
 	}
 	}
 	}
+
+
+/** TOTAL NUMBER OF PDF DOWNLOADED */
+function countpdld() {
+
+	$sql = "SELECT sum(`dwnld`) AS totpdf FROM pdf";
+	$rsl = query($sql);
+	$row = mysqli_fetch_array($rsl);
+
+	$ssl = "SELECT sum(`dwnld`) AS totpq FROM pq";
+	$res = query($ssl);
+	$rwl = mysqli_fetch_array($res);
+
+	echo $a = $row['totpdf'] + $rwl['totpq'];
+}
+
+/** TOTAL PDFs UPLOADED */
+function countupl() {
+
+	$sql = "SELECT sum(`sn`) AS totpdf FROM pdf";
+	$rsl = query($sql);
+	$row = mysqli_fetch_array($rsl);
+
+	$ssl = "SELECT sum(`sn`) AS totpq FROM pq";
+	$res = query($ssl);
+	$rwl = mysqli_fetch_array($res);
+
+	echo $a = $row['totpdf'] + $rwl['totpq'];
+}
+
+
+/** EARNINGS MADE */
+function earning() {
+
+	$sql = "SELECT sum(`withdraw`) AS earn FROM signup";
+	$rsl = query($sql);
+	$row = mysqli_fetch_array($rsl);
+
+	echo $a = $row['earn'];
+}
 ?>

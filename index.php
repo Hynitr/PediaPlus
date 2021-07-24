@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>DotPedia</title>
+    <title>DotPedia | Home</title>
     <meta name="description" content="DotPedia | Home">
     <meta name="keywords" content="DotPedia, Pdf">
     <meta property="og:title" content="DotPedia" />
@@ -122,22 +122,34 @@
                 </div>
             </div>
 
+
+
             <div class="block-counter-1 section-counter">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="counter">
                             <div class="number-wrap">
-                                <span class="block-counter-1-number" data-number="100">0</span><span
+                                <span class="block-counter-1-number" data-number="<?php countpdld() ?>">0</span><span
                                     class="append"></span>
                             </div>
                             <span class="block-counter-1-caption">PDFs Downloaded</span>
                         </div>
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="counter">
                             <div class="number-wrap">
-                                <span class="block-counter-1-number" data-number="200">0</span><span
+                                <span class="block-counter-1-number" data-number="<?php countupl() ?>">0</span><span
+                                    class="append"></span>
+                            </div>
+                            <span class="block-counter-1-caption">Academic Materials</span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="counter">
+                            <div class="number-wrap">
+                                <span class="block-counter-1-number" data-number="<?php earning() ?>">0</span><span
                                     class="append"></span>
                             </div>
                             <span class="block-counter-1-caption">Earnings Made</span>

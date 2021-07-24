@@ -14,8 +14,9 @@
                         <ul class="list-unstyled">
                             <li><a href="./pdf">Download PDFs</a></li>
                             <li><a href="./credit">Buy PDF Credits</a></li>
-                            <li><a href="./donate">Donate PDF</a></li>
-                            <li><a href="./ads">Ads Center</a></li>
+                            <li><a href="./profile#donor">Donate PDF</a></li>
+                            <li><a href="./pq">Past Questions</a></li>
+                            <li><a href="./cbt">Take a Test</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 mb-5 mb-lg-0 col-lg-3">
