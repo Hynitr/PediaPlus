@@ -73,7 +73,7 @@
                                    if(isset($_SESSION['login'])) {
                                        echo '<li><a style="color: #000;" href="./profile"><span><b>My Profile</b></span></a></li>';
                                    } else {
-                                      echo '<li><a href="./signin"><span><b>Sign In</b></span></a></li>'; 
+                                      echo '<li><a href="./signup"><span><b>Sign Up</b></span></a></li>'; 
                                    }
                                    ?>
 
