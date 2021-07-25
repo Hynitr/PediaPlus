@@ -168,7 +168,7 @@ if(!isset($_SESSION['login'])) {
 
 
                         <p class="mb-0 font-weight-bold">Earn Much More</p>
-                        <p class="mb-4"><a data-toggle="modal" data-target="#refLink" href="#"
+                        <p class="mb-4"><a data-toggle="modal" data-target="#tutor" href="#"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Become a
                                     Tutor</span></a> &nbsp; | &nbsp; <a href="./uplpq"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>
@@ -263,7 +263,7 @@ if(!isset($_SESSION['login'])) {
 
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <button type="submit" name="donatenow" id=""
-                                    style="background: #FFE9E6; color: #ff0000;"
+                                    style="background: #FFE9E6; color: #ff0000; width: 100%;"
                                     class="btn btn-pill btn-primary btn-md">Upload PDF</button><br />
                             </div>
                         </div>

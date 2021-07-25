@@ -35,7 +35,7 @@ include("functions/init.php");
     <div style="background:  #FFE9E6" class="block-quick-info-2">
         <div class="container">
             <div class="block-quick-info-2-inner">
-                <div style="padding: 0px;" class="col-md-12 col-sm-12">
+                <div class="col-md-12 col-sm-12">
                     <?php uploadpq() ?>
                     <br />
                     <form method="post" class="bg-white donatepdf" id="donor" enctype="multipart/form-data">
