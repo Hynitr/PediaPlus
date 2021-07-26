@@ -183,10 +183,11 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="d-flex quick-info-2">
-                            <span class="icon icon-facebook mr-3"></span>
+                            <span class="icon icon-google mr-3"></span>
                             <div class="text">
-                                <strong class="d-block heading">Facebook</strong>
-                                <span class="excerpt"><a href="https://m.me/mydotpedia">Let`s Connect</a></span>
+                                <strong class="d-block heading">Google</strong>
+                                <span class="excerpt"><a target="_blank" href="https://g.page/r/Cb03X8PaQkzYEBA">Let`s
+                                        Connect</a></span>
                             </div>
                         </div>
                     </div>
@@ -195,7 +196,7 @@
                             <span class="icon icon-phone mr-3"></span>
                             <div class="text">
                                 <strong class="d-block heading">Need Help</strong>
-                                <span class="excerpt"><a href="tel: +2348103171902">+234 810 317 1902</a></span>
+                                <span class="excerpt"><a href="tel: +2349121087509">+234 912 1087 509</a></span>
                             </div>
                         </div>
                     </div>
@@ -215,7 +216,7 @@
                             <div class="text">
                                 <strong class="d-block heading">WhatsApp</strong>
                                 <span class="excerpt"><a
-                                        href="https://wa.me/2348103171902?text=Hello%2c%20I`m%20_____%0AI%20need%20help%20with%20DotPedia"
+                                        href="https://wa.me/2349121087509?text=Hello%2c%20I`m%20_____%0AI%20need%20help%20with%20DotPedia"
                                         target="_blank">Chat us up</a></span>
                             </div>
                         </div>
