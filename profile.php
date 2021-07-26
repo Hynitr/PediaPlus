@@ -150,8 +150,9 @@ if(!isset($_SESSION['login'])) {
                                     PDFs</span>
                                 <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
-                        <p class="mb-0 font-weight-bold">Total Earnings</p>
-                        <p class="mb-4">NGN <?php echo number_format($a) ?></a> - <a href="#"
+                        <p class="mb-0 font-weight-bold">Total Earnings (1 point = NGN10)</p>
+                        <p class="mb-4"><?php echo number_format($a) ?> Points/NGN
+                            <?php echo number_format($a) * 10 ?></a> - <a href="#"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Withdraw
                                     Funds</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
