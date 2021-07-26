@@ -70,7 +70,7 @@
                         <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Get PDF
                                 Credits</a></h3>
                         <div class="block-service-1-excerpt">
-                            <p>Use your PDF Credit to download lecture PDFs from DotPedia. Once your PDF Credit is
+                            <p>Use your PDF Credit to download Past Questions from DotPedia. Once your PDF Credit is
                                 exhausted, you`ll be required to buy PDF credits</p>
                         </div>
                         <p><a href="dashboard/./credit"
@@ -85,9 +85,10 @@
                         <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Donate PDFs</a>
                         </h3>
                         <div class="block-service-1-excerpt">
-                            <p>You can help donate unavailable PDFs on DotPedia. We award donators who donates PDFs on
-                                DotPedia with 2 points per PDF uploaded. Once you reach a total of 700points, you will
-                                be awarded with 50 PDF Credits.</p>
+                            <p>You can help donate unavailable PDFs on DotPedia. We award donators who donates PDFs,
+                                Past Questions and refer friends on
+                                DotPedia with 1 point. Once you reach a total of 100points, you will
+                                be awarded with NGN1,000.</p>
                         </div>
                         <p><a href="dashboard/./donate"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Doante PDFs</span>
