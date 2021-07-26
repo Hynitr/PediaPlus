@@ -698,6 +698,17 @@ function countupl() {
 }
 
 
+/** COUNT USERS */
+function countusers() {
+
+	$sql = "SELECT sum(`id`) as totuser FROM signup";
+	$rsl = query($sql);
+	$row = mysqli_fetch_array($rsl);
+	
+	echo $row['totuser'];
+}
+
+
 /** EARNINGS MADE */
 function earning() {
                       
