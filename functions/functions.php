@@ -700,11 +700,35 @@ function countupl() {
 
 /** EARNINGS MADE */
 function earning() {
+                      
+	//add earn from pdf upload
+	$stl = "SELECT sum(sn) AS total, sum(earn) AS earning FROM pdf";
+	$rtl = query($stl); 
+	$rtw = mysqli_fetch_array($rtl);
 
-	$sql = "SELECT sum(`withdraw`) AS earn FROM signup";
-	$rsl = query($sql);
-	$row = mysqli_fetch_array($rsl);
+	//add earn from past questions uploads
+	$swl = "SELECT sum(sn) AS pqtotal, sum(earn) AS pqearning FROM pq";
+	$rwl = query($swl); 
+	$rww = mysqli_fetch_array($rwl);
 
-	echo $a = $row['earn'];
+   
+	//get total referrals
+	$raf = "SELECT sum(id) AS reftotal FROM signup";
+	$ras = query($raf);
+	
+
+	if(row_count($ras) == '') {
+		
+		$refff = 0;
+	} else {
+
+		$rao    = mysqli_fetch_array($ras);
+		$refff  = number_format($rao['reftotal']);                             
+
+	}
+	
+	
+	$a = $rtw['earning'] + $rww['pqearning'] + $refff;
+	echo $a;
 }
 ?>
