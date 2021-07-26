@@ -122,9 +122,7 @@ if(!isset($_SESSION['login'])) {
                         $rwl = query($swl); 
                         $rww = mysqli_fetch_array($rwl);
 
-                        $a = $rtw['earning'] + $rww['pqearning'];
-
-
+                       
                         //get total referrals
                         $raf = "SELECT sum(id) AS reftotal FROM signup WHERE `ref` = '$user'";
                         $ras = query($raf);
@@ -136,11 +134,12 @@ if(!isset($_SESSION['login'])) {
                         } else {
 
                             $rao    = mysqli_fetch_array($ras);
-                            $refff  = number_format($rao['reftotal']); 
+                            $refff  = number_format($rao['reftotal']);                             
 
                         }
                         
-
+                        
+                        $a = $rtw['earning'] + $rww['pqearning'] + $refff;
                         ?>
 
                         <p class="mb-0 font-weight-bold">Total PDF(s) Donated</p>
