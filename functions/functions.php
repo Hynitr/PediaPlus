@@ -580,7 +580,7 @@ if(isset($_POST['donatenow'])) {
 		$result = query($ssl);
 
 		echo validator("Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
-		//echo '<script>window.location.href ="./profile"</script>';
+		echo '<script>window.location.href ="./profile#upddate"</script>';
 	}
 
 }

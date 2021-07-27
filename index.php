@@ -67,14 +67,14 @@
                     <div class="block-service-1-card">
                         <div class="number-behind">02</div>
                         <a href="#" class="thumbnail-link d-block mb-4"></a>
-                        <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Get PDF
+                        <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Get Pedia
                                 Credits</a></h3>
                         <div class="block-service-1-excerpt">
-                            <p>Use your PDF Credit to download Past Questions from DotPedia. Once your PDF Credit is
+                            <p>Use your PDF Credit to download Past Questions from DotPedia. Once your Pedia Credit is
                                 exhausted, you`ll be required to buy PDF credits</p>
                         </div>
-                        <p><a href="dashboard/./credit"
-                                class="d-inline-flex align-items-center block-service-1-more"><span>Get PDF
+                        <p><a href="./credit" class="d-inline-flex align-items-center block-service-1-more"><span>Get
+                                    Pedia
                                     Credit</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
                     </div>
                 </div>
@@ -82,7 +82,8 @@
                     <div class="block-service-1-card">
                         <div class="number-behind">03</div>
                         <a href="#" class="thumbnail-link d-block mb-4"></a>
-                        <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Donate PDFs</a>
+                        <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a
+                                href="./profile#upddate">Donate PDFs</a>
                         </h3>
                         <div class="block-service-1-excerpt">
                             <p>You can help donate unavailable PDFs on DotPedia. We award donators who donates PDFs,
@@ -90,7 +91,7 @@
                                 DotPedia with 1 point. Once you reach a total of 100points, you will
                                 be awarded with NGN1,000.</p>
                         </div>
-                        <p><a href="dashboard/./donate"
+                        <p><a href="./profile#upddate"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Doante PDFs</span>
                                 <span class="icon-keyboard_arrow_right icon"></span></a></p>
                     </div>

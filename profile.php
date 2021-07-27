@@ -104,9 +104,9 @@ if(!isset($_SESSION['login'])) {
 
 
                     <div class="p-4 mb-3 bg-white">
-                        <p class="mb-0 font-weight-bold">Available PDF Credit</p>
+                        <p class="mb-0 font-weight-bold">Available Pedia Credit</p>
                         <p class="mb-4">NGN <?php echo number_format($row['pdfcredit']) ?> - <a href="#"
-                                class="d-inline-flex align-items-center block-service-1-more"><span>Buy PDF
+                                class="d-inline-flex align-items-center block-service-1-more"><span>Buy Pedia
                                     Credit</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
                         <?php      
@@ -186,10 +186,13 @@ if(!isset($_SESSION['login'])) {
 
                 </div>
 
+
+
                 <div class="col-md-7 mb-5 donatepdf" data-aos="fade" id="donor">
 
 
-                    <?php uploadpdf() ?>
+
+
                     <br />
                     <form method="post" class="p-5 bg-white donatepdf" id="donor" enctype="multipart/form-data">
 
@@ -198,7 +201,11 @@ if(!isset($_SESSION['login'])) {
 
                         <div class="row form-group">
 
+
+
+
                             <div class="col-md-12 mb-3 mb-md-4">
+                                <div id="upddate"> <?php uploadpdf() ?></div>
                                 <label class="text-black font-weight-bold" for="inst">Institution</label>
                                 <input type="text" id="inst" name="inst"
                                     placeholder="e.g Federal University Oye Ekiti.." class="form-control" required>
