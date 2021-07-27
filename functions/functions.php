@@ -162,8 +162,8 @@ function register($fname, $tel, $email, $uname, $pword, $inst, $ref) {
 
 	$activator = token_generator();
 	
-$sql = "INSERT INTO signup(`id`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `activator`, `vrf`, `ref`)";
-$sql.= " VALUES('1', '$fnam', '$unam', '$emai', '$pwor', '$datereg', '0', '$tel', '$inst', '$activator', 'No', '$ref')";
+$sql = "INSERT INTO signup(`id`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `activator`, `vrf`, `ref`, `pvf`)";
+$sql.= " VALUES('1', '$fnam', '$unam', '$emai', '$pwor', '$datereg', '0', '$tel', '$inst', '$activator', 'No', '$ref', '0')";
 $result = query($sql);
 
 //redirect to verify function
@@ -560,7 +560,7 @@ if(isset($_POST['donatenow'])) {
 			   
 			   move_uploaded_file($_FILES["pdffile"]["tmp_name"], $targetFilePath);
 	
-	if($row['vrf'] == 'Yes') {
+	if($row['pvf'] == '1') {
 				
 		//approve PDF and upload details
 		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
@@ -646,7 +646,7 @@ function uploadpq() {
 			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
-			$_SESSION['uploaded'] = "Your PDF was approved and uploaded successfully";
+			$_SESSION['pquploaded'] = "Your Past Questions was approved and uploaded successfully";
 	
 			echo 'Loading...Please Wait!';
 			echo '<script>window.location.href ="./pq#latest"</script>';
@@ -658,7 +658,7 @@ function uploadpq() {
 			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', 'No', '1', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
-			echo validator("Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
+			echo validator("Your Past Questions has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
 			//echo '<script>window.location.href ="./profile"</script>';
 		}
 	
