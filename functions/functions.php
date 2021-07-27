@@ -639,7 +639,7 @@ function uploadpq() {
 				   
 				   move_uploaded_file($_FILES["pdffile"]["tmp_name"], $targetFilePath);
 		
-		if($row['active'] == '1') {
+		if($row['pvf'] == '1') {
 					
 			//approve PDF and upload details
 			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
