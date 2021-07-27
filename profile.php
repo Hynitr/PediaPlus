@@ -105,7 +105,7 @@ if(!isset($_SESSION['login'])) {
 
                     <div class="p-4 mb-3 bg-white">
                         <p class="mb-0 font-weight-bold">Available Pedia Credit</p>
-                        <p class="mb-4">NGN <?php echo number_format($row['pdfcredit']) ?> - <a href="#"
+                        <p class="mb-4">NGN <?php echo number_format($row['pdfcredit']) ?> - <a href="./credit"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Buy Pedia
                                     Credit</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
@@ -143,17 +143,18 @@ if(!isset($_SESSION['login'])) {
                         ?>
 
                         <p class="mb-0 font-weight-bold">Total PDF(s) Donated</p>
-                        <p class="mb-4"><?php echo number_format($rtw['total']) ?></a> - <a data-toggle="modal"
-                                data-target="#uploaded" href="#"
-                                class="d-inline-flex align-items-center block-service-1-more"><span>View Uploaded
-                                    PDFs</span>
+                        <p class="mb-4"><?php echo number_format($rtw['total']) ?></a> - <a href="#donor"
+                                class="d-inline-flex align-items-center block-service-1-more"><span>Donate
+                                    Materials</span>
                                 <span class="icon-keyboard_arrow_right icon"></span></a></p>
 
                         <p class="mb-0 font-weight-bold">Total Earnings (1 point = NGN10)</p>
                         <p class="mb-4"><?php echo number_format($a) ?> Points/NGN
-                            <?php echo number_format($a) * 10 ?></a> - <a href="#"
+                            <span id="vll"><?php echo number_format($a) * 10 ?></span>- <a id="withdraw"
+                                style="cursor: pointer; color: #ff0000;"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Withdraw
-                                    Funds</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
+                                    Funds</span> <span class="icon-keyboard_arrow_right icon"></span></a>
+                        </p>
 
 
 

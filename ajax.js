@@ -8,7 +8,7 @@ $(document).ready(function () {
     var user = $("#usname").val();
     var pword = $("#pword").val();
     var cpword = $("#cpword").val();
-    var ref    = $("#ref").val();
+    var ref = $("#ref").val();
 
     if (fname == "" || fname == null) {
       $("#msg").html("Input your full name please");
@@ -47,7 +47,7 @@ $(document).ready(function () {
                         pword: pword,
                         cpword: cpword,
                         inst: inst,
-                        ref:ref,
+                        ref: ref,
                       },
                       success: function (data) {
                         $("#msg").html(data);
@@ -309,7 +309,6 @@ $(document).ready(function () {
     xhr.send();
   });
 
-
   /** SEARCH FILTER ADVANCED */
   $("#filterr").click(function () {
     var inst = $("#inst").val();
@@ -351,4 +350,21 @@ $(document).ready(function () {
 
     xhr.send();
   });
+
+/**WITHDRAW FUNDS */
+$("#withdraw").click(function () {
+var point = $("#vall").text();
+
+if(point <= 99){
+  alert("The minimum withdrawal is NGN1,000");
+
+} else {
+
+alert("You have been scheduled for withdrawal");
+}
+});
+
+
+/**BUY PEDIA CREDIT */
+
 });
