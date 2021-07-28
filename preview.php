@@ -83,10 +83,8 @@ if(!isset($_GET['pdf'])) {
 
 
                 <object style="width: 100%; height: 100vh; border:none"
-                    data="http://docs.google.com/gview?url=http://dotpedia.com.ng/pdfs/<?php echo $row['filer'] ?>"
-                    type="application/pdf">
-                    <embed
-                        src="http://docs.google.com/gview?url=http://dotpedia.com.ng/pdfs/<?php echo $row['filer'] ?>"
+                    data="http://docs.google.com/gview?url=pdfs/<?php echo $row['filer'] ?>" type="application/pdf">
+                    <embed src="http://docs.google.com/gview?url=pdfs/<?php echo $row['filer'] ?>"
                         type="application/pdf" />
                 </object>
             </div>
