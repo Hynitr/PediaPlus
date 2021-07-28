@@ -55,7 +55,7 @@
 </footer>
 <script>
 var MessageBirdChatWidgetSettings = {
-    widgetId: '5388d685-ca07-4e3f-9469-8c467871d56d',
+    widgetId: '5892da9a-2b02-4dce-9506-4c66aac4bfaa',
     initializeOnLoad: true,
 };
 ! function() {
