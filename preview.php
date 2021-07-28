@@ -75,11 +75,11 @@ if(!isset($_GET['pdf'])) {
 
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item"
-                            src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/CERTIFICATE - DOTEIGHTPLUS.pdf"
+                            src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/<?php echo $row['filer'] ?>"
                             allowfullscreen></iframe>
                     </div>
 
-                    
+
 
 
                     <!-- If you really need the inline PDF to show in almost every browser, 
