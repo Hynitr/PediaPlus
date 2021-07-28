@@ -72,16 +72,20 @@ if(!isset($_GET['pdf'])) {
             <div class="block-quick-info-2-inner">
                 <div class="row col-lg-12">
 
-                    <!--<iframe style="width: 100%; height: 100vh; border:none"
-                        src="pdfs/<?php echo $row['filer'] ?>"></iframe>-->
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                            src="https://dotpedia.com.ng/pdfs/CERTIFICATE - DOTEIGHTPLUS.pdf" allowfullscreen></iframe>
+                    </div>
+
 
                     <!-- If you really need the inline PDF to show in almost every browser, 
-                    as older browsers understand embed but not object, you'll need to do this: -->
+                    as older browsers understand embed but not object, you'll need to do this:
                     <object style="width: 100%; height: 100vh; border:none" data="pdfs/<?php echo $row['filer'] ?>"
                         type="application/pdf">
                         <embed src="pdfs/<?php echo $row['filer'] ?>" type="application/pdf" />
                     </object>
-
+                     -->
                 </div>
             </div>
         </div>
