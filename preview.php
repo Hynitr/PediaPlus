@@ -75,7 +75,7 @@ if(!isset($_GET['pdf'])) {
 
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item"
-                            src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/<?php echo $row['filer'] ?>"
+                            src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/1.pdf"
                             allowfullscreen></iframe>
                     </div>
 
