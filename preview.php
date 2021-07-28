@@ -73,25 +73,25 @@ if(!isset($_GET['pdf'])) {
                 <div class="row col-lg-12">
 
 
-                    <div class="embed-responsive embed-responsive-16by9">
+                    <!--<div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item"
                             src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/1.pdf"
-                            allowfullscreen></iframe>
-                    </div>
-
-
-
-
-                    <!-- If you really need the inline PDF to show in almost every browser, 
-                    as older browsers understand embed but not object, you'll need to do this:
-                    <object style="width: 100%; height: 100vh; border:none" data="pdfs/<?php echo $row['filer'] ?>"
-                        type="application/pdf">
-                        <embed src="pdfs/<?php echo $row['filer'] ?>" type="application/pdf" />
-                    </object>
-                     -->
+                            allowfullscreen></iframe>-->
                 </div>
+
+
+
+
+                <object style="width: 100%; height: 100vh; border:none"
+                    data="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/<?php echo $row['filer'] ?>"
+                    type="application/pdf">
+                    <embed
+                        src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/<?php echo $row['filer'] ?>"
+                        type="application/pdf" />
+                </object>
             </div>
         </div>
+    </div>
     </div>
 
 
