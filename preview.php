@@ -73,23 +73,22 @@ if(!isset($_GET['pdf'])) {
                 <div class="row col-lg-12">
 
 
-                    <!--<div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item"
-                            src="http://docs.google.com/gview?url=https://dotpedia.com.ng/pdfs/1.pdf"
-                            allowfullscreen></iframe>-->
-                </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="pdfs/<?php echo $row['filer'] ?>"
+                            allowfullscreen></iframe>
+                    </div>
 
 
 
 
-                <object style="width: 100%; height: 100vh; border:none"
+                    <!--<object style="width: 100%; height: 100vh; border:none"
                     data="https://docs.google.com/gview?url=pdfs/<?php echo $row['filer'] ?>" type="application/pdf">
                     <embed src="https://docs.google.com/gview?url=pdfs/<?php echo $row['filer'] ?>"
-                        type="application/pdf" />
-                </object>
+                        type="application/pdf" />-->
+                    </object>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
 

@@ -88,15 +88,17 @@ if(!isset($_GET['pdf'])) {
             <div class="block-quick-info-2-inner">
                 <div class="row col-lg-12">
 
-                    <!--<iframe style="width: 100%; height: 100vh; border:none"
-                        src="pqs/<?php echo $row['filer'] ?>"></iframe>-->
 
-                    <!-- If you really need the inline PDF to show in almost every browser, 
-                    as older browsers understand embed but not object, you'll need to do this: -->
-                    <object style="width: 100%; height: 100vh; border:none" data="pqs/<?php echo $row['filer'] ?>"
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="pqs/<?php echo $row['filer'] ?>"
+                            allowfullscreen></iframe>
+                    </div>
+
+
+                    <!--<object style="width: 100%; height: 100vh; border:none" data="pqs/<?php echo $row['filer'] ?>"
                         type="application/pdf">
                         <embed src="pqs/<?php echo $row['filer'] ?>" type="application/pdf" />
-                    </object>
+                    </object>-->
 
                 </div>
             </div>
