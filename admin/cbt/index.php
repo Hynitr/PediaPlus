@@ -47,15 +47,14 @@
 
             <form class="contact100-form validate-form flex-sb flex-w">
                 <span class="contact100-form-title">
-                    <?php echo $call['school'] ." ". date("Y") ?>
+                    <?php echo $call['school']?>
                 </span>
 
                 <?php
 $sql = "SHOW TABLES";
 $result = query($sql);
 while ($row = mysqli_fetch_row($result)) {
-  if($row[0] == "login" || $row[0] == "timer" || $row[0] == "signup" || $row[0] == "tutors" || $row[0] == "pq" || $row[0] == "pdf" 
-  || $row[0] == "result") {
+  if($row[0] == "login" || $row[0] == "timer" || $row[0] == "result") {
     echo '
     		<span class="contact100-form-title text-danger">
 					No Exam to take 
@@ -85,7 +84,7 @@ while ($row = mysqli_fetch_row($result)) {
                 </select>
                 <br /><br /><br />
                 <button style="background: #FFE9E6;" type="button" id="startcbt" class="btn">Start CBT</button>
-                <button type="button" id="startcbt" class="btn btn-dark">Take Me Home</button>
+                <button type="button" id="hometake" class="btn btn-dark">Take Me Home</button>
 
             </form>
             <?php
@@ -93,9 +92,7 @@ while ($row = mysqli_fetch_row($result)) {
 		}
 		?>
             <br />
-            <p align="center">&copy; <?php echo $call['school'] ?> | <span style="color: red;"> <a style="color: red"
-                        target="_blank" href="https://doteightplus.com"> DotEightPlus
-                        <?php echo date("Y"); ?></a></span> </p>
+            <p align="center">&copy; <?php echo $call['school'] ?> </p>
         </div>
 
     </div>

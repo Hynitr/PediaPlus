@@ -59,6 +59,13 @@ $(document).ready(function () {
     }
   });
 
+
+   //take me home
+   $("#hometake").click(function () {
+    
+      window.location.href = "../../pdf";
+    });
+
   //cbt start
   $("#rcbtstart").click(function () {
     var cbbr = $("#cbbr").text();
