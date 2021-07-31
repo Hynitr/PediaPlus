@@ -118,7 +118,7 @@ if(!isset($_SESSION['login'])) {
                         $rtw = mysqli_fetch_array($rtl);
 
                         //add earn from past questions uploads
-                        $swl = "SELECT sum(sn) AS pqtotal, sum(earn) AS pqearning FROM pq WHERE `upld` = '$user'";
+                        $swl = "SELECT sum(sn) AS pqtotal, sum(earn) AS pqearning FROM pq WHERE `upld` = '$user' AND `approve` = 'Yes'";
                         $rwl = query($swl); 
                         $rww = mysqli_fetch_array($rwl);
 
