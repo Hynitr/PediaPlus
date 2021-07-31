@@ -113,7 +113,7 @@ if(!isset($_SESSION['login'])) {
                         $user = $_SESSION['login'];
                         
                         //add earn from pdf upload
-                        $stl = "SELECT sum(sn) AS total, sum(earn) AS earning FROM pdf  WHERE `upld` = '$user'";
+                        $stl = "SELECT sum(sn) AS total, sum(earn) AS earning FROM pdf  WHERE `upld` = '$user' AND `approve` = 'Yes'";
                         $rtl = query($stl); 
                         $rtw = mysqli_fetch_array($rtl);
 
