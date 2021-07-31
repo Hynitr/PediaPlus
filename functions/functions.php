@@ -686,11 +686,11 @@ function countpdld() {
 /** TOTAL PDFs UPLOADED */
 function countupl() {
 
-	$sql = "SELECT sum(`sn`) AS totpdf FROM pdf";
+	$sql = "SELECT sum(`sn`) AS totpdf FROM pdf WHERE `approve` = 'Yes'";
 	$rsl = query($sql);
 	$row = mysqli_fetch_array($rsl);
 
-	$ssl = "SELECT sum(`sn`) AS totpq FROM pq";
+	$ssl = "SELECT sum(`sn`) AS totpq FROM pq WHERE `approve` = 'Yes'";
 	$res = query($ssl);
 	$rwl = mysqli_fetch_array($res);
 
@@ -701,7 +701,7 @@ function countupl() {
 /** COUNT USERS */
 function countusers() {
 
-	$sql = "SELECT sum(`id`) as totuser FROM signup";
+	$sql = "SELECT sum(`id`) as totuser FROM signup WHERE `active` = '1'";
 	$rsl = query($sql);
 	$row = mysqli_fetch_array($rsl);
 	
@@ -713,12 +713,12 @@ function countusers() {
 function earning() {
                       
 	//add earn from pdf upload
-	$stl = "SELECT sum(sn) AS total, sum(earn) AS earning FROM pdf";
+	$stl = "SELECT sum(sn) AS total, sum(earn) AS earning FROM pdf WHERE `approve` = 'Yes'";
 	$rtl = query($stl); 
 	$rtw = mysqli_fetch_array($rtl);
 
 	//add earn from past questions uploads
-	$swl = "SELECT sum(sn) AS pqtotal, sum(earn) AS pqearning FROM pq";
+	$swl = "SELECT sum(sn) AS pqtotal, sum(earn) AS pqearning FROM pq WHERE `approve` = 'Yes'";
 	$rwl = query($swl); 
 	$rww = mysqli_fetch_array($rwl);
 
