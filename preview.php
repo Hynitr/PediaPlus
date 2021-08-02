@@ -78,9 +78,11 @@ if(!isset($_GET['pdf'])) {
             </div>
         </div>
     </div>
-
-
-
+    <div class="row justify-content-center mb-4 mt-4">
+        <p data-aos="fade-up" data-aos-delay="100"><a style="width: 100%" href="pdfs/<?php echo $row['filer'];?>"
+                class="btn btn-primary btn-pill" download>Download PDF</a>
+        </p>
+    </div>
 
     <?php include("include/footer.php"); ?>
     </div>
