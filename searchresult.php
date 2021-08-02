@@ -25,7 +25,7 @@ $level = clean(escape($_GET['level']));
             <div class="row mb-3 align-items-stretch">
 
                 <?php
-$sql = "SELECT * FROM pdf WHERE `title` LIKE '%$txt%' AND `inst` LIKE '%$inst%' AND `dept` LIKE '%$dept%' AND `level` LIKE '%$level%' AND `fcg` LIKE '%$fcg%' AND `approve` = 'Yes'";
+$sql = "SELECT * FROM pdf WHERE `title` LIKE '%$txt%' OR `code` LIKE '%$txt%' AND `inst` LIKE '%$inst%' AND `dept` LIKE '%$dept%' AND `level` LIKE '%$level%' AND `fcg` LIKE '%$fcg%' AND `approve` = 'Yes'";
 $rsl = query($sql);
 
 if(row_count($rsl) != '') {
@@ -85,14 +85,14 @@ if($pdf['vrf'] == 'Yes') {
                                 Downloads
                                 <br /><br />
                                 <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                        href="https://twitter.com/home?status=https://dotpedia.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                        href="https://twitter.com/home?status=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                             class="icon-twitter"></i></a></span>
                                 <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                        href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                        href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                             class="icon-facebook"></i></a></span>
                                 <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                         data-media="images/ico.png"
-                                        href="https://api.whatsapp.com/send?text=https://teensyouths.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                        href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                             class="icon-whatsapp"></i></a></span>
                             </div>
 
@@ -130,7 +130,7 @@ if($pdf['vrf'] == 'Yes') {
                 <h3 class="h5 text-black mb-3">Related Past Questions</h3>
                 <ul class="list-unstyled post-lists">
                     <?php 
-$sql = "SELECT * FROM pq WHERE `title` LIKE '%$txt%' AND `inst` LIKE '%$inst%' AND `dept` LIKE '%$dept%' AND `level` LIKE '%$level%' AND `fcg` LIKE '%$fcg%' AND `approve` = 'Yes' ORDER BY RAND() LIMIT 5";
+$sql = "SELECT * FROM pq WHERE `title` LIKE '%$txt%' OR `code` LIKE '%$txt%' AND `inst` LIKE '%$inst%' AND `dept` LIKE '%$dept%' AND `level` LIKE '%$level%' AND `fcg` LIKE '%$fcg%' AND `approve` = 'Yes' ORDER BY RAND() LIMIT 5";
 $rsl = query($sql);
 
 while($row = mysqli_fetch_array($rsl)) {
