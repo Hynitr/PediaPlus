@@ -565,7 +565,7 @@ if(isset($_POST['donatenow'])) {
 				
 		//approve PDF and upload details
 		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
+		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '2', '$pedia', '$target_file')";
 		$result = query($ssl);
 
 		$_SESSION['uploaded'] = "Your PDF was approved and uploaded successfully";
@@ -577,7 +577,7 @@ if(isset($_POST['donatenow'])) {
 
 		//disapprove pdf
 		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'No', '1', '$pedia', '$target_file')";
+		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'No', '2', '$pedia', '$target_file')";
 		$result = query($ssl);
 
 		echo validator("Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
@@ -645,7 +645,7 @@ function uploadpq() {
 					
 			//approve PDF and upload details
 			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '4', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
 			$_SESSION['pquploaded'] = "Your Past Questions was approved and uploaded successfully";
@@ -657,7 +657,7 @@ function uploadpq() {
 	
 			//disapprove pdf
 			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', 'No', '0', '1', '$pedia', '$target_file')";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', 'No', '0', '4', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
 			echo validator("Your Past Questions has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
