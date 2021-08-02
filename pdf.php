@@ -224,7 +224,8 @@
 
 
                                         </a>
-                                        <span class="mx-2">&bullet;</span> <?php echo $row['level'] ?><br />
+                                        <span class="mx-2">&bullet;</span> <?php echo $row['code'] ?><br />
+                                        <span class="mx-2">&bullet;</span> <?php echo $row['level'] ?>
                                         <span class="mx-2">&bullet;</span> <?php echo $row['dept'] ?>
                                         <span class="mx-2">&bullet;</span> <?php echo $row['dwnld'] ?>
                                         Downloads
