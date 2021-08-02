@@ -599,7 +599,8 @@ function uploadpq() {
 	
 		$inst 	= $_POST['inst'];
 		$typ 	= $_POST['typ'];
-		$title 	= $_POST['title'];
+		$title 	= $_POST['coursetitle'];
+		$ccode 	= $_POST['coursecode'];
 		$fcg	= $_POST['fcg'];
 		$dept   = $_POST['dept'];
 		$level  = $_POST['level'];
@@ -643,8 +644,8 @@ function uploadpq() {
 		if($row['pvf'] == '1') {
 					
 			//approve PDF and upload details
-			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
+			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
 			$_SESSION['pquploaded'] = "Your Past Questions was approved and uploaded successfully";
@@ -655,8 +656,8 @@ function uploadpq() {
 		} else {
 	
 			//disapprove pdf
-			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `approve`, `earn`, `pedia`, `filer`)";
-			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', 'No', '1', '$pedia', '$target_file')";
+			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `approve`, `earn`, `pedia`, `filer`)";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$code', '$fcg', '$dept', '$level', '$upl', 'No', '1', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
 			echo validator("Your Past Questions has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
