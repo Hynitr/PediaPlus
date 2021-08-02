@@ -230,14 +230,14 @@
                                         Downloads
                                         <br /><br />
                                         <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                                href="https://twitter.com/home?status=https://dotpedia.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                                href="https://twitter.com/home?status=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                                     class="icon-twitter"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                                href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                                href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=https://teensyouths.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 
@@ -327,14 +327,14 @@
                                         Downloads
                                         <br /><br />
                                         <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                                href="https://twitter.com/home?status=https://dotpedia.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                                href="https://twitter.com/home?status=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                                     class="icon-twitter"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                                href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                                href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=https://teensyouths.com.ng/preview/<?php echo $row['title'] ?>"><i
+                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 
