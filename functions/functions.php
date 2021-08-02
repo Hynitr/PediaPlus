@@ -576,8 +576,8 @@ if(isset($_POST['donatenow'])) {
 	} else {
 
 		//disapprove pdf
-		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `approve`, `earn`, `pedia`, `filer`)";
-		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', 'No', '1', '$pedia', '$target_file')";
+		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
+		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'No', '1', '$pedia', '$target_file')";
 		$result = query($ssl);
 
 		echo validator("Your PDF has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
@@ -656,8 +656,8 @@ function uploadpq() {
 		} else {
 	
 			//disapprove pdf
-			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `approve`, `earn`, `pedia`, `filer`)";
-			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', 'No', '1', '$pedia', '$target_file')";
+			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', 'No', '0', '1', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
 			echo validator("Your Past Questions has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
