@@ -564,8 +564,8 @@ if(isset($_POST['donatenow'])) {
 	if($row['pvf'] == '1') {
 				
 		//approve PDF and upload details
-		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
+		$ssl = "INSERT INTO pdf(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
+		$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'Yes', '1', '$pedia', '$target_file')";
 		$result = query($ssl);
 
 		$_SESSION['uploaded'] = "Your PDF was approved and uploaded successfully";
