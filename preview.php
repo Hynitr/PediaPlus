@@ -33,7 +33,7 @@ if(!isset($_GET['pdf'])) {
 	$rsl = query($ssl);
        
     }
-
+    $_SESSION['file'] = $row['filer'];
 }
 ?>
 
@@ -69,23 +69,11 @@ if(!isset($_GET['pdf'])) {
     </div>
     <div class="block-quick-info-2">
         <div class="container">
-            <div class="block-quick-info-2-inner">
-                <div class="row col-lg-12">
+            <div style="height: 80vh;" class=" block-quick-info-2-inner">
+                <div class="row">
 
+                    <iframe src="pdfs/viewer.php" style="width: 100%; height: 75vh; z-index: 9999"></iframe>
 
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="pdfs/<?php echo $row['filer'] ?>"
-                            allowfullscreen></iframe>
-                    </div>
-
-
-
-
-                    <!--<object style="width: 100%; height: 100vh; border:none"
-                    data="https://docs.google.com/gview?url=pdfs/<?php echo $row['filer'] ?>" type="application/pdf">
-                    <embed src="https://docs.google.com/gview?url=pdfs/<?php echo $row['filer'] ?>"
-                        type="application/pdf" />-->
-                    </object>
                 </div>
             </div>
         </div>
