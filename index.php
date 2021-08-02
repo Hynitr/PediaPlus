@@ -134,7 +134,7 @@
                                 <span class="block-counter-1-number" data-number="<?php countpdld() ?>">0</span><span
                                     class="append"></span>
                             </div>
-                            <span class="block-counter-1-caption">PDFs Downloaded</span>
+                            <span class="block-counter-1-caption">PDFs Downloads</span>
                         </div>
                     </div>
 
@@ -144,7 +144,7 @@
                                 <span class="block-counter-1-number" data-number="<?php countupl() ?>">0</span><span
                                     class="append"></span>
                             </div>
-                            <span class="block-counter-1-caption">Academic Materials</span>
+                            <span class="block-counter-1-caption">PDF Materials</span>
                         </div>
                     </div>
 
@@ -154,7 +154,7 @@
                                 <span class="block-counter-1-number" data-number="<?php earning() ?>">0</span><span
                                     class="append"></span>
                             </div>
-                            <span class="block-counter-1-caption">Earnings Made</span>
+                            <span class="block-counter-1-caption">Total Earnings</span>
                         </div>
                     </div>
                 </div>
