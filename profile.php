@@ -212,7 +212,7 @@ if(!isset($_SESSION['login'])) {
                                     placeholder="e.g Federal University Oye Ekiti.." class="form-control" required>
                             </div>
 
-                            <div class="col-md-6 mb-3 mb-md-4">
+                            <div class="col-md-12 mb-3 mb-md-4">
                                 <label class="text-black font-weight-bold" for="typ">Institution Type</label>
                                 <select name="typ" id="typ" class="custom-select form-control">
                                     <option name="typ" id="typ">University</option>
@@ -223,11 +223,16 @@ if(!isset($_SESSION['login'])) {
                             </div>
 
                             <div class="col-md-6 mb-3 mb-md-4">
-                                <label class="text-black font-weight-bold" for="title">PDF Title</label>
-                                <input type="text" name="title" id="title" class="form-control"
+                                <label class="text-black font-weight-bold" for="title">Course Code</label>
+                                <input type="text" name="coursecode" id="coursecode" class="form-control"
                                     placeholder="e.g GST 101" required>
                             </div>
 
+                            <div class="col-md-6 mb-3 mb-md-4">
+                                <label class="text-black font-weight-bold" for="title">Course Title</label>
+                                <input type="text" name="coursetitle" id="coursetitle" class="form-control"
+                                    placeholder="e.g Feasibility Studies" required>
+                            </div>
 
                             <div class="col-md-12 mb-3 mb-md-4">
                                 <label class="text-black font-weight-bold" for="lname">Faculty/College</label>
@@ -267,7 +272,6 @@ if(!isset($_SESSION['login'])) {
                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>
-
 
                             <div class="col-md-12 mb-3 mb-md-0">
                                 <button type="submit" name="donatenow" id=""

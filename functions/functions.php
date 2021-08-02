@@ -519,7 +519,8 @@ if(isset($_POST['donatenow'])) {
 
 	$inst 	= $_POST['inst'];
 	$typ 	= $_POST['typ'];
-	$title 	= $_POST['title'];
+	$title 	= $_POST['coursetitle'];
+	$ccode 	= $_POST['coursecode'];
 	$fcg	= $_POST['fcg'];
 	$dept   = $_POST['dept'];
 	$level  = $_POST['level'];
