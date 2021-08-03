@@ -657,7 +657,7 @@ function uploadpq() {
 	
 			//disapprove pdf
 			$ssl = "INSERT INTO pq(`sn`, `inst`, `typ`, `title`, `code`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `earn`, `pedia`, `filer`)";
-			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', 'No', '0', '4', '$pedia', '$target_file')";
+			$ssl.= "VALUES('1', '$inst', '$typ', '$title', '$ccode', '$fcg', '$dept', '$level', '$upl', '0', 'No', '4', '$pedia', '$target_file')";
 			$result = query($ssl);
 	
 			echo validator("Your Past Questions has been uploaded. A mail will be sent to you once your PDF is reviewed and approved.");
