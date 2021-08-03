@@ -143,17 +143,7 @@ if(!isset($_GET['pdf'])) {
         document.getElementById("lopdf").innerHTML = "Loading... Please Wait";
     }
     </script>
-    <script>
-    function myFunction() {
-        var txt;
-        if (confirm("Press a button!")) {
-            txt = "You pressed OK!";
-        } else {
-            txt = "You pressed Cancel!";
-        }
-        document.getElementById("demo").innerHTML = txt;
-    }
-    </script>
+
     </body>
 
 </html>

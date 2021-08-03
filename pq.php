@@ -249,7 +249,8 @@ if($pdf['vrf'] == 'Yes') {
                                     <div class="col-md-12 ">
                                         <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><input
                                                 style="width: 100%; background: #FFE9E6; color: #ff0000;" type="submit"
-                                                value="Preview/Download" id="" class="btn btn-pill btn-md "></a><br />
+                                                value="Preview/Download" onclick="myFunction()"
+                                                class="btn btn-pill btn-md "></a><br />
                                     </div>
                                 </div>
                             </div>
@@ -370,6 +371,20 @@ if($pdf['vrf'] == 'Yes') {
     </div>
 
     <?php include("include/footer.php"); ?>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
+                <div class="modal-body">
+                    <div id="msg" class="text-center font-weight-bold">2 Pedia Point is always deducted, when you
+                        preview/download a past
+                        question</div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -403,6 +418,13 @@ if($pdf['vrf'] == 'Yes') {
     </script>
 
     <script src="js/main.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        // Show the Modal on load
+        $("#exampleModalCenter").modal("show");
+    });
+    </script>
 
     <script src="ajax.js"></script>
 
