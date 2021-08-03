@@ -97,8 +97,9 @@ if(!isset($_GET['pdf'])) {
 
 
     <div class="row justify-content-center mb-4 mt-4">
-        <p data-aos="fade-up" data-aos-delay="100"><a style="width: 100%" href="pqs/<?php echo $row['filer'];?>"
-                class="btn btn-primary btn-pill" download>Download Past Question</a>
+        <p data-aos="fade-up" data-aos-delay="100"><a id="lopdf" onclick="loadpqs()" style="width: 100%"
+                href="pdfs/<?php echo $row['filer'];?>" class="btn btn-primary btn-pill" download>Download Past
+                Question</a>
         </p>
     </div>
 
@@ -135,7 +136,13 @@ if(!isset($_GET['pdf'])) {
     </script>
 
     <script src="js/main.js"></script>
+    <script>
+    function loadpqs() {
+        var x = "Loading... Please Wait";
 
+        document.getElementById("lopdf").innerHTML = "Loading... Please Wait";
+    }
+    </script>
     </body>
 
 </html>
