@@ -174,7 +174,7 @@
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-    $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY id asc";
+    $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY dwnld desc";
     $rls = query($ssl); 
 
     while($row = mysqli_fetch_array($rls)) {
