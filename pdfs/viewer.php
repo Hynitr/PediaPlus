@@ -463,7 +463,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     </div>
                 </div>
             </div>
-            <div id="printServiceOverlay" class="container hidden">
+            <!--<div id="printServiceOverlay" class="container hidden">
                 <div class="dialog">
                     <div class="row">
                         <span data-l10n-id="print_progress_message">Preparing document for printing…</span>
@@ -478,7 +478,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                                 data-l10n-id="print_progress_close">Cancel</span></button>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div> <!-- overlayContainer -->
 
     </div> <!-- outerContainer -->

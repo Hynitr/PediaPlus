@@ -84,6 +84,9 @@ if(!isset($_GET['pdf'])) {
         </p>
     </div>
 
+    <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle
+        popover</a>
+
     <?php include("include/footer.php"); ?>
     </div>
 

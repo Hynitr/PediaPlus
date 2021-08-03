@@ -284,7 +284,7 @@
                                 <div class="h-entry-inner">
                                     <a href="#"><img src="images/pdff.png" alt="" class="img-fluid"></a>
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                        <?php echo $row['title']; ?>
+                                        <?php echo $row['title']; ?> .
                                     </h2>
                                     <div style="color: #000" class="meta mb-4">Uploaded by <a
                                             href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
