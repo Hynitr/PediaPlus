@@ -187,7 +187,8 @@ if(!isset($_SESSION['login'])) {
                         <div class="col-md-4 col-lg-4 mb-4 mb-lg-4">
                             <div class="h-entry">
                                 <div class="h-entry-inner">
-                                    <a href="#"><img src="images/pdff.png" alt="" class="img-fluid"></a>
+                                    <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><img src="images/pdff.png"
+                                            alt="" class="img-fluid"></a>
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
                                         <?php echo $row['title']; ?>
                                     </h2>

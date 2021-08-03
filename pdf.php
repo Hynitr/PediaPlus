@@ -239,7 +239,7 @@
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
+                                                href="https://api.whatsapp.com/send?text=Read/Download *<?php echo $row['title'] ?>* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 
