@@ -25,7 +25,7 @@ $level = clean(escape($_GET['level']));
             <div class="row mb-3 align-items-stretch">
 
                 <?php
-$sql = "SELECT * FROM pdf WHERE `title` LIKE '%$txt%' OR `code` LIKE '%$txt%' AND `inst` LIKE '%$inst%' AND `dept` LIKE '%$dept%' AND `level` LIKE '%$level%' AND `fcg` LIKE '%$fcg%' AND `approve` = 'Yes'";
+$sql = "SELECT * FROM pdf WHERE `title` LIKE '%$txt%' OR `code` LIKE '%$txt%' OR `inst` LIKE '%$inst%' OR `dept` LIKE '%$dept%' OR `level` LIKE '%$level%' OR `fcg` LIKE '%$fcg%' AND `approve` = 'Yes'";
 $rsl = query($sql);
 
 if(row_count($rsl) != '') {
@@ -131,7 +131,7 @@ if($pdf['vrf'] == 'Yes') {
                 <h3 class="h5 text-black mb-3">Related Past Questions</h3>
                 <ul class="list-unstyled post-lists">
                     <?php 
-$sql = "SELECT * FROM pq WHERE `title` LIKE '%$txt%' OR `code` LIKE '%$txt%' AND `inst` LIKE '%$inst%' AND `dept` LIKE '%$dept%' AND `level` LIKE '%$level%' AND `fcg` LIKE '%$fcg%' AND `approve` = 'Yes' ORDER BY RAND() LIMIT 5";
+$sql = "SELECT * FROM pq WHERE `title` LIKE '%$txt%' OR `code` LIKE '%$txt%' OR `inst` LIKE '%$inst%' OR `dept` LIKE '%$dept%' OR `level` LIKE '%$level%' OR `fcg` LIKE '%$fcg%' AND `approve` = 'Yes' ORDER BY RAND() LIMIT 5";
 $rsl = query($sql);
 
 while($row = mysqli_fetch_array($rsl)) {
