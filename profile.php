@@ -124,7 +124,7 @@ if(!isset($_SESSION['login'])) {
 
                        
                         //get total referrals
-                        $raf = "SELECT sum(id) AS reftotal FROM signup WHERE `ref` = '$user'";
+                        $raf = "SELECT sum(id) AS reftotal FROM signup WHERE `ref` = '$user' AND `active` = '1'";
                         $ras = query($raf);
                         
 

@@ -229,6 +229,18 @@
 
 
     <?php include("include/footer.php"); ?>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
+                <div class="modal-body">
+                    <div id="msg" class="text-center font-weight-bold"><img class="img-fluid" src="images/tell.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -286,6 +298,12 @@
             console.log('ServiceWorker registration failed: ', err);
         });
     }
+    </script>
+    <script>
+    $(document).ready(function() {
+        // Show the Modal on load
+        $("#exampleModalCenter").modal("show");
+    });
     </script>
 
     </body>
