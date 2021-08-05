@@ -212,7 +212,7 @@ h5,
 .btn.btn-primary:hover {
   color: #fff;
   background: rgba(255, 0, 0, 0.5);
-  border:1px solid #fff;
+  border: 1px solid #fff;
 }
 
 .btn.btn-outline-primary {
@@ -556,7 +556,10 @@ h5,
   margin-bottom: 0px;
   z-index: 1999;
   position: absolute;
-  top: 2rem;
+  top: 0rem;
+  position: fixed;
+  background: #ffe9e6;
+  height: 90px;
   width: 100%;
 }
 

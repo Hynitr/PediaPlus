@@ -49,13 +49,12 @@
                <div class="site-mobile-menu-body"></div>
            </div>
 
-           <header style="position: fixed; background: #FFE9E6; top: 0rem; height: 90px;" class="site-navbar"
-               role="banner">
+           <header class="site-navbar" role="banner">
 
                <div class="container">
                    <div class="row align-items-center">
 
-                       <div class="col-11 col-xl-4">
+                       <div class="col-8 col-xl-4">
                            <h1 class="mb-0 site-logo"><a href="./" class="text-white mb-0"><img
                                        style="width: ; height: 90px;" class="img-fluid" src="images/cover.png"></a>
                            </h1>
@@ -83,7 +82,7 @@
 
 
                        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
-                           style="position: relative; top: 3px; right: 20px;"><a style="color: #ff0000;" href="#"
+                           style="position: relative; top: 3px; left: 2.5rem;"><a style="color: #ff0000;" href="#"
                                class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a>
                        </div>
 
