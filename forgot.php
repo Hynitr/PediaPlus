@@ -79,6 +79,17 @@ if(isset($_SESSION['login'])) {
         </div>
     </div>
 
+       <!-- Modal -->
+    <div class="modal fade" id="security">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
+                <div class="modal-body">
+                    <div class="text-center font-weight-bold"> Kindly reset your password.  We are working to ensure your account is secured. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
@@ -112,6 +123,14 @@ if(isset($_SESSION['login'])) {
     </script>
 
     <script src="js/main.js"></script>
+     
+     <script>
+    $(document).ready(function() {
+        // Show the Modal on load
+        $("#security").modal("show");
+    });
+    </script>
+
     </body>
 
 </html>
