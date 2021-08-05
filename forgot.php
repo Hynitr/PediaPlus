@@ -84,7 +84,7 @@ if(isset($_SESSION['login'])) {
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
                 <div class="modal-body">
-                    <div class="text-center font-weight-bold"> Kindly reset your password.  We are working to ensure your account is secured. </div>
+                    <div class="text-center font-weight-bold"> Kindly reset your password. <br/> We are working to ensure your account is secured. </div>
                 </div>
             </div>
         </div>
