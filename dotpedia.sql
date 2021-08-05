@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2021 at 05:33 PM
+-- Generation Time: Aug 05, 2021 at 05:56 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -40,7 +40,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `school`, `username`, `password`, `acesscode`) VALUES
-(1, 'DotPedia | Take a Test', 'demo', '7e36723822df1cadd0cc888e0681d37b', 'demo');
+(1, 'DotPedia | Take a Test', 'demo', '8f96e4f5fcff936298f13a4b8db8a242', 'demo');
 
 -- --------------------------------------------------------
 
@@ -62,8 +62,18 @@ CREATE TABLE `pdf` (
   `approve` text NOT NULL,
   `filer` text NOT NULL,
   `earn` int(11) NOT NULL,
-  `pedia` text NOT NULL
+  `pedia` text NOT NULL,
+  `code` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pdf`
+--
+
+INSERT INTO `pdf` (`id`, `sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `filer`, `earn`, `pedia`, `code`) VALUES
+(36, '1', 'sbdb', 'University', 'sdbdb', 'babdsb', 'bsbdb', '100 Level', 'DotPedia', '100', 'Yes', 'CERTIFICATE - DOTEIGHTPLUS.pdf', 2, 'pedia3479', ''),
+(37, '1', 'bvbvbv', 'College of Education', 'cvvccvc', 'vccvcv', 'vbvbvb', '100 Level', 'DotPedia', '', 'Yes', 'Resume-Abolade-Greatness.pdf', 2, 'pedia5062', 'bvbvbv'),
+(38, '1', 'nncdn', 'University', 'NNN', 'ncncn', 'ncncn', 'ND 2', 'DotPedia', '19', 'Yes', 'TEAGO_Brand-Identity.pdf', 2, 'pedia932', 'ncnn');
 
 -- --------------------------------------------------------
 
@@ -85,8 +95,16 @@ CREATE TABLE `pq` (
   `approve` text NOT NULL,
   `filer` text NOT NULL,
   `earn` text NOT NULL,
-  `pedia` text NOT NULL
+  `pedia` text NOT NULL,
+  `code` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pq`
+--
+
+INSERT INTO `pq` (`id`, `sn`, `inst`, `typ`, `title`, `fcg`, `dept`, `level`, `upld`, `dwnld`, `approve`, `filer`, `earn`, `pedia`, `code`) VALUES
+(2, 1, 'bxbxbbxb', 'University', 'bcbcbcbc', 'cbcb', 'cbcb', '100 Level', 'DotPedia', '27', 'Yes', 'Resume-Abolade-Greatness.pdf', '4', 'pedia7195', 'bbcb');
 
 -- --------------------------------------------------------
 
@@ -126,15 +144,16 @@ CREATE TABLE `signup` (
   `withdraw` text NOT NULL,
   `pix` text NOT NULL,
   `vrf` text NOT NULL,
-  `ref` text NOT NULL
+  `ref` text NOT NULL,
+  `pvf` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `signup`
 --
 
-INSERT INTO `signup` (`id`, `sn`, `activator`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `pdfcredit`, `withdraw`, `pix`, `vrf`, `ref`) VALUES
-(1, 81, '', 'Abolade Greatness', 'DotPedia', 'mydotpedia@gmail.com', '53c1df01e11ec01bcf9ced4ccae8c667', '2021-07-10', '1', '981036', 'FUOYE', '1', '0', '2021-03-06.jpg', 'Yes', '');
+INSERT INTO `signup` (`id`, `sn`, `activator`, `fname`, `usname`, `email`, `pword`, `datereg`, `active`, `tel`, `inst`, `pdfcredit`, `withdraw`, `pix`, `vrf`, `ref`, `pvf`) VALUES
+(1, 81, '', 'Abolade Greatness', 'DotPedia', 'mydotpedia@gmail.com', '53c1df01e11ec01bcf9ced4ccae8c667', '2021-07-10', '1', '981036', 'FUOYE', '9991', '0', 'hero-img.png', 'Yes', '', '');
 
 -- --------------------------------------------------------
 
@@ -215,13 +234,13 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `pdf`
 --
 ALTER TABLE `pdf`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `pq`
 --
 ALTER TABLE `pq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `result`
