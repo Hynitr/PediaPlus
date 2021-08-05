@@ -74,7 +74,7 @@ if(!isset($_GET['vef'])) {
 
                         <div class="mt-5">
                             <p class="text-center font-weight-bold"><a style="color: #ff0000; cursor: pointer;"
-                                    id="reset">Recover Password
+                                    id="reset">Update Password
                                 </a></p>
                         </div>
 
