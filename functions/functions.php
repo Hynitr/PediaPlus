@@ -276,7 +276,7 @@ $send = mail($to, $subject, $body, $headers);
 
 		}else {
 
-			echo "Invalid Login";
+		         redirect('./forgot');
 		}
 	}
 
