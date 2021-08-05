@@ -276,7 +276,8 @@ $send = mail($to, $subject, $body, $headers);
 
 		}else {
 
-		         redirect('./forgot');
+		         echo 'Loading...Please Wait!';
+                         echo '<script>window.location.href ="./forgot"</script>';;
 		}
 	}
 
