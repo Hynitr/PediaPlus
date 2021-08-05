@@ -50,7 +50,7 @@ if(isset($_SESSION['login'])) {
                             <div class="col-md-6 mt-4">
                                 <label for="password">Password</label>
                                 <input type="password" id="lgpword" class="form-control"
-                                    placeholder="Create your username">
+                                    placeholder="Input your password">
                             </div>
                         </div>
 
