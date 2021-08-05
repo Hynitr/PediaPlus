@@ -186,7 +186,7 @@
                                     <a href="./preview?pdf=<?php echo $row['pedia'] ?>"><img src="images/pdff.png"
                                             alt="" class="img-fluid"></a>
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                        <?php echo $row['title']; ?>
+                                        <?php echo ucwords($row['title']); ?>
                                     </h2>
                                     <div style="color: #000" class="meta mb-4">Uploaded by <a href="#">
 
@@ -239,7 +239,7 @@
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=Read/Download *<?php echo $row['title'] ?>* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
+                                                href="https://api.whatsapp.com/send?text=Read/Download *<?php echo ucwords($row['title']) ?>* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 
@@ -274,7 +274,7 @@
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-                        $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 0 AND 4 ORDER BY id desc";
+                        $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 0 AND 4 ORDER BY id desc LIMIT 6";
                         $rls = query($ssl); 
 
                         while($row = mysqli_fetch_array($rls)) {
@@ -286,7 +286,7 @@
                                     <a href="./preview?pdf=<?php echo $row['pedia'] ?>"><img src="images/pdff.png"
                                             alt="" class="img-fluid"></a>
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                        <?php echo $row['title']; ?> .
+                                        <?php echo ucwords($row['title']); ?> .
                                     </h2>
                                     <div style="color: #000" class="meta mb-4">Uploaded by <a
                                             href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
@@ -338,7 +338,7 @@
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
+                                                href="https://api.whatsapp.com/send?text=Read/Download *<?php echo ucwords($row['title']) ?>* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 

@@ -41,7 +41,7 @@ while($row = mysqli_fetch_array($rsl)) {
                         <div class="h-entry-inner">
                             <a href="#"><img src="images/pdff.png" alt="" class="img-fluid"></a>
                             <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                <?php echo $row['title']; ?>
+                                <?php echo ucwords($row['title']); ?>
                             </h2>
                             <div style="color: #000" class="meta mb-4">Uploaded by <a
                                     href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
@@ -93,7 +93,7 @@ if($pdf['vrf'] == 'Yes') {
                                             class="icon-facebook"></i></a></span>
                                 <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                         data-media="images/ico.png"
-                                        href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
+                                        href="https://api.whatsapp.com/send?text=Read/Download *<?php echo ucwords($row['title']) ?>* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
                                             class="icon-whatsapp"></i></a></span>
                             </div>
 
@@ -136,7 +136,8 @@ $rsl = query($sql);
 
 while($row = mysqli_fetch_array($rsl)) {
 ?>
-                    <li class="mb-2"><a href="./pqpreview?=<?php echo $row['pedia'] ?>"><?php echo $row['title'] ?></a>
+                    <li class="mb-2"><a
+                            href="./pqpreview?=<?php echo $row['pedia'] ?>"><?php echo ucwords($row['title']) ?></a>
                     </li>
                     <?php
 }

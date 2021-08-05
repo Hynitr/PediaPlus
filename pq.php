@@ -178,7 +178,7 @@ if(!isset($_SESSION['login'])) {
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-    $ssl = "SELECT * FROM pq WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY dwnld desc";
+    $ssl = "SELECT * FROM pq WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY dwnld desc LIMIT 6";
     $rls = query($ssl); 
 
     while($row = mysqli_fetch_array($rls)) {
@@ -190,7 +190,7 @@ if(!isset($_SESSION['login'])) {
                                     <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><img src="images/pdff.png"
                                             alt="" class="img-fluid"></a>
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                        <?php echo $row['title']; ?>
+                                        <?php echo ucwords($row['title']); ?>
                                     </h2>
                                     <div style="color: #000" class="meta mb-4">Uploaded by <a href="#"><?php echo $row['upld']; 
 
@@ -241,7 +241,7 @@ if($pdf['vrf'] == 'Yes') {
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/pqpreview?pdf=<?php echo $row['pedia'] ?>"><i
+                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/pqpreview?pdf=Practice/Download *<?php echo ucwords($row['title']) ?> Past Question* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 
@@ -250,8 +250,7 @@ if($pdf['vrf'] == 'Yes') {
                                     <div class="col-md-12 ">
                                         <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><input
                                                 style="width: 100%; background: #FFE9E6; color: #ff0000;" type="submit"
-                                                value="Preview/Download" onclick="myFunction()"
-                                                class="btn btn-pill btn-md "></a><br />
+                                                value="Preview/Download" class="btn btn-pill btn-md "></a><br />
                                     </div>
                                 </div>
                             </div>
@@ -289,7 +288,7 @@ if($pdf['vrf'] == 'Yes') {
                                     <a href="./pqpreview?pdf=<?php echo $row['pedia'] ?>"><img src="images/pdff.png"
                                             alt="" class="img-fluid"></a>
                                     <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                        <?php echo $row['title']; ?>
+                                        <?php echo ucwords($row['title']); ?>
                                     </h2>
                                     <div style="color: #000" class="meta mb-4">Uploaded by <a
                                             href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
@@ -341,7 +340,7 @@ if($pdf['vrf'] == 'Yes') {
                                                     class="icon-facebook"></i></a></span>
                                         <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
                                                 data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/pqpreview?pdf=Practice/Download *<?php echo $row['title'] ?> Past Question* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
+                                                href="https://api.whatsapp.com/send?text=https://dotpedia.com.ng/pqpreview?pdf=Practice/Download *<?php echo ucwords($row['title']) ?> Past Question* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
                                                     class="icon-whatsapp"></i></a></span>
                                     </div>
 
