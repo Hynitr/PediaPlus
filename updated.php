@@ -6,7 +6,7 @@ if(isset($_SESSION['login'])) {
     unset($_SESSION['login']);
 }
 
-if(!isset($_SESSION['usemail'])) {
+if(!isset($_SESSION['fgeml'])) {
 
 redirect("./opps");
 }
