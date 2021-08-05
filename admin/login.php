@@ -67,8 +67,7 @@
                 </div>
             </form>
             <br />
-            <p align="center">&copy; <?php echo $call['school'] ." ". date("Y") ?> | Developed by: <a target="_blank"
-                    href="https://doteightplus.com"><span style="color: red;"> DotEightPlus</span> </p>
+
         </div>
 
     </div>

@@ -88,7 +88,7 @@ if(!isset($_GET['pdf'])) {
             <div style="height: 80vh;" class=" block-quick-info-2-inner">
                 <div class="row">
 
-                    <iframe src="pdfs/viewer.php" style="width: 100%; height: 75vh; z-index: 9999"></iframe>
+                    <iframe src="pqs/viewer.php" style="width: 100%; height: 75vh; z-index: 9999"></iframe>
 
                 </div>
             </div>
