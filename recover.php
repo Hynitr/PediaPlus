@@ -31,7 +31,7 @@ redirect("./opps");
                                     style="color: #FFE9E6; border-radius: 0px 20px 0px 20px;"
                                     class="typed-words"></span></h1>
                             <p style="margin-top: -40px;">A recovery link has been sent to
-                                <span class="font-weight-bold"><?php echo $_SESSION['usemail'] ?></span>
+                                <span class="font-weight-bold"><?php echo $_SESSION['fgeml'] ?></span>
                             </p>
 
                         </div>
