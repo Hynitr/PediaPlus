@@ -85,9 +85,7 @@ $data = $_GET['id'];
 
             </form>
             <br />
-            <p align="center">&copy; <?php echo $call['school'] ?> | <span style="color: red;"> <a style="color: red"
-                        target="_blank" href="https://doteightplus.com"> DotEightPlus
-                        <?php echo date("Y"); ?></a></span> </p>
+
         </div>
 
     </div>
