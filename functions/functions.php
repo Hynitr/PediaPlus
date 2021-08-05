@@ -360,8 +360,9 @@ $send = mail($to, $subject, $body, $headers);
 if(isset($_POST['fgpword']) && isset($_POST['fgcpword']) && isset($_POST['act'])) {
 
 	$fgpword = md5($_POST['fgpword']);
+        $eml = $_SESSION['fgeml'];
 
-	$sql = "UPDATE signup SET `pword` = '$fgpword', `activator` = '$act' WHERE `activator` = '$activator'";
+	$sql = "UPDATE signup SET `pword` = '$fgpword', `activator` = '' WHERE `email` = '$eml'";
 	$rsl = query($sql);
 
 	//redirect to verify page
