@@ -13,6 +13,43 @@
     <meta property="og:url" content="https://dotpedia.com.ng" />
     <meta property="og:site_name" content="DotPedia from DotEightPlus" />
     <meta property="og:description" content="Read, Earn, Share" />
+    <style>
+        .link {padding: 10px 15px;background: transparent;border:#FFE9E6 1px solid;border-left:0px;cursor:pointer;color:#607d8b}
+        .disabled {cursor:not-allowed;color: #bccfd8;}
+        .current {background: #FFE9E6;}
+        .first{border-left:#FFE9E6 1px solid;}
+        .question {font-weight:bold;}
+        .answer{padding-top: 10px;}
+        #pagination{margin-top: 20px;padding-top: 30px;border-top: #ffe9e6 1px solid;}
+        .dot {padding: 10px 15px;background: transparent;border-right: #bccfd8 1px solid;}
+        #overlay {background-color: rgba(0, 0, 0, 0.6);z-index: 999;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: none;}
+        #overlay div {position:absolute;left:50%;top:50%;margin-top:-32px;margin-left:-32px;}
+        .page-content {padding: 20px;margin: 0 auto;}
+        .pagination-setting {padding:10px; margin:5px 0px 10px;border:#bccfd8  1px solid;color:#607d8b;}
+    </style>
+    
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+        function latest(url) {
+        $.ajax({
+            url: url,
+            type: "GET",
+            data:  {rowcount:$("#rowcount").val(),"pagination_setting":$("#pagination-setting").val()},
+            beforeSend: function(){$("#overlay").show();},
+            success: function(data){
+            $("#pagination-result").html(data);
+            setInterval(function() {$("#overlay").hide(); },500);
+            },
+            error: function() 
+            {}          
+       });
+    }
+    function changePagination(option) {
+        if(option!= "") {
+            latest("latest.php");
+        }
+    }
+    </script>
     <?php include("include/header.php"); ?>
     <div class="site-blocks-cover overlay" style="background-image: url(images/3.png);" data-aos="fade"
         data-stellar-background-ratio="0.5">
@@ -271,98 +308,21 @@
                 <div class="col-md-12" id="latest">
 
                     <h2 style="color: #ff0000" class="mb-4"><b>Latest PDF(s) </b></h2>
-                    <div class="row mb-3 align-items-stretch">
-
-                        <?php
-                        $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 0 AND 4 ORDER BY id desc LIMIT 6";
-                        $rls = query($ssl); 
-
-                        while($row = mysqli_fetch_array($rls)) {
-                        
-                        ?>
-                        <div class="col-md-4 col-lg-4 mb-4 mb-lg-4">
-                            <div class="h-entry">
-                                <div class="h-entry-inner">
-                                    <a href="./preview?pdf=<?php echo $row['pedia'] ?>"><img src="images/pdff.png"
-                                            alt="" class="img-fluid"></a>
-                                    <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
-                                        <?php echo ucwords($row['title']); ?> .
-                                    </h2>
-                                    <div style="color: #000" class="meta mb-4">Uploaded by <a
-                                            href="./<?php echo $row['upld'] ?>"><?php echo $row['upld']; 
-
-                            //verification tick
-                            $paa  = $row['upld'];    
-                                        
-                            $psql = "SELECT * FROM signup WHERE `usname` = '$paa'";
-                            $prsl = query($psql); 
-                            
-                            //if user account is deleted
-                            if(row_count($prsl) == 0) {
-                                
-                            //convert user account to default
-                            $pusl = "UPDATE pdf SET `upld` = 'DotPedia' WHERE `upld` = '$paa'";
-                            $purl = query($pusl);   
-                                
-                                
-                            } else {
-
-                            $pdf = mysqli_fetch_array($prsl);
-
-                                
-                            if($pdf['vrf'] == 'Yes') {
-                                echo ' <i style="color: #ff0000" class="icon-check-circle"></i>';
-
-                            } else {
-
-                                echo '';
-                            }
-
-                            
-                        }
-                            ?>
-
-
-                                        </a>
-                                        <span class="mx-2">&bullet;</span> <?php echo $row['code'] ?><br />
-                                        <span class="mx-2">&bullet;</span> <?php echo $row['level'] ?>
-                                        <span class="mx-2">&bullet;</span> <?php echo $row['dept'] ?>
-                                        <span class="mx-2">&bullet;</span> <?php echo $row['dwnld'] ?>
-                                        Downloads
-                                        <br /><br />
-                                        <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                                href="https://twitter.com/home?status=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
-                                                    class="icon-twitter"></i></a></span>
-                                        <span class="mx-2"><a target="_blank" data-media="images/ico.png"
-                                                href="https://facebook.com/sharer.php?u=https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?>"><i
-                                                    class="icon-facebook"></i></a></span>
-                                        <span class="mx-2"><a target="_blank" data-action="share/whatsapp/share"
-                                                data-media="images/ico.png"
-                                                href="https://api.whatsapp.com/send?text=Read/Download *<?php echo ucwords($row['title']) ?>* via: https://dotpedia.com.ng/preview?pdf=<?php echo $row['pedia'] ?> - *Uploaded by: <?php echo $row['upld'] ?>*"><i
-                                                    class="icon-whatsapp"></i></a></span>
-                                    </div>
-
-
-
-                                    <div class="col-md-12 ">
-                                        <a href="./preview?pdf=<?php echo $row['pedia'] ?>"><input
-                                                style="width: 100%; background: #FFE9E6; color: #ff0000;" type="submit"
-                                                value="Preview/Download" class="btn btn-pill btn-md "></a><br />
-                                    </div>
-                                </div>
+                    <div class="page-content">
+                            <div>
+                            <br> <select hidden name="pagination-setting" onChange="changePagination(this.value);" class="pagination-setting" id="pagination-setting">
+                            <option value="all-links">Display All Page Link</option>
+                            <option value="prev-next">Display Prev Next Only</option>
+                            </select>
                             </div>
-
-                        </div>
-
-
-
-                        <?php
-                        }
-                        ?>
-
-                    </div>
+                            
+                            <div id="pagination-result" class="row">
+                            <input type="hidden" name="rowcount" id="rowcount" />
+                            
+                        </div>  
+                   
                 </div>
-
+                        
 
 
             </div>
@@ -372,6 +332,7 @@
     <?php include("include/footer.php"); ?>
     </div>
 
+    <script>latest("latest.php");</script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
