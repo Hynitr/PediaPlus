@@ -27,7 +27,7 @@
         .page-content {padding: 20px;margin: 0 auto;}
         .pagination-setting {padding:10px; margin:5px 0px 10px;border:#bccfd8  1px solid;color:#607d8b;}
     </style>
-    
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
     <script>
         function latest(url) {
@@ -211,7 +211,7 @@
                     <div class="row mb-3 align-items-stretch">
 
                         <?php
-    $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY dwnld desc";
+    $ssl = "SELECT * FROM pdf WHERE `approve` = 'Yes' AND `dwnld` BETWEEN 5 AND 1000000000000000 ORDER BY dwnld desc LIMIT 6";
     $rls = query($ssl); 
 
     while($row = mysqli_fetch_array($rls)) {
@@ -305,21 +305,26 @@
 
 
 
-                <div class="col-md-12" id="latest">
+                <div class="col-md-12 mt-5" id="latest">
 
                     <h2 style="color: #ff0000" class="mb-4"><b>Latest PDF(s) </b></h2>
-                    <div class="page-content">
-                            <div>
-                            <br> <select hidden name="pagination-setting" onChange="changePagination(this.value);" class="pagination-setting" id="pagination-setting">
-                            <option value="all-links">Display All Page Link</option>
-                            <option value="prev-next">Display Prev Next Only</option>
-                            </select>
-                            </div>
-                            
-                            <div id="pagination-result" class="row">
-                            <input type="hidden" name="rowcount" id="rowcount" />
+                    <div class="row mb-3 align-items-stretch">
+
+                        <div class="page-content">
+                                <div>
+                                <br> <select hidden name="pagination-setting" onChange="changePagination(this.value);" class="pagination-setting" id="pagination-setting">
+                                <option value="all-links">Display All Page Link</option>
+                                <option value="prev-next">Display Prev Next Only</option>
+                                </select>
+                                </div>
+
+                        
+                                
+                                <div id="pagination-result" class="row">
+                                <input type="hidden" name="rowcount" id="rowcount" />
                             
                         </div>  
+                    </div>
                    
                 </div>
                         

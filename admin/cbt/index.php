@@ -76,7 +76,7 @@ while ($row = mysqli_fetch_row($result)) {
             ';
   } else {
           ?>
-                    <option id="cbtsbj"><?php echo $row[0] ?></option>
+                    <option id="cbtsbj"><?php echo strtoupper($row[0]) ?></option>
                     <?php
   }
 }
