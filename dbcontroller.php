@@ -20,4 +20,13 @@ class DBController {
 			return $rowcount;
 		}
 	}
+
+	function fetch_arrays($psql) {
+
+	global $con;
+	$result  = mysqli_query($this->$con,$psq);
+	$rowcount = mysqli_num_rows($result);
+	return mysqli_fetch_array($result);
+
+}
 ?>

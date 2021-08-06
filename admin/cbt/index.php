@@ -96,9 +96,21 @@ while ($row = mysqli_fetch_row($result)) {
         </div>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
+                <div class="modal-body">
+                    <div id="msg" class="text-center font-weight-bold">3 Pedia Credit will be deducted, when you <br />
+                        take CBT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div id="dropDownSelect1"></div>
-
+    
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
@@ -114,7 +126,12 @@ while ($row = mysqli_fetch_row($result)) {
     <!--===============================================================================================-->
     <script src="ajax.js"></script>
     <!--===============================================================================================-->
-
+    <script>
+    $(document).ready(function() {
+        // Show the Modal on load
+        $("#exampleModalCenter").modal("show");
+    });
+    </script>
 </body>
 
 </html>

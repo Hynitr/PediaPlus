@@ -379,7 +379,7 @@ if($pdf['vrf'] == 'Yes') {
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
                 <div class="modal-body">
-                    <div id="msg" class="text-center font-weight-bold">2 Pedia Point will be deducted, when you <br />
+                    <div id="msg" class="text-center font-weight-bold">2 Pedia Credit will be deducted, when you <br />
                         preview/download a past
                         question</div>
                 </div>
