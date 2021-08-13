@@ -102,7 +102,7 @@ while ($row = mysqli_fetch_row($result)) {
             <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
                 <div class="modal-body">
                     <div id="msg" class="text-center font-weight-bold">3 Pedia Credit will be deducted, when you <br />
-                        take CBT</div>
+                        take CBT.</div>
                 </div>
             </div>
         </div>

@@ -35,7 +35,7 @@ foreach($faq as $k=>$v) {
  $output .='<div  class="col-md-4 col-lg-4 mb-4 mb-lg-4">
                 <div class="h-entry">
                     <div class="h-entry-inner">
-                        <a href="blog-single.html"><img src="images/pdff.png" alt="" class="img-fluid"></a>
+                        <a href="./preview?pdf='.$faq[$k]['pedia'].'"><img src="images/pdff.png" alt="" class="img-fluid"></a>
                         <h2 style="color: #ff0000" class="font-size-regular font-weight-bold">
                                         '.$faq[$k]['title'].'
                         </h2>
@@ -103,7 +103,7 @@ foreach($faq as $k=>$v) {
 
 }
 if(!empty($perpageresult)) {
-$output .= '<div id="pagination" style="color:#ea728c" class="col-lg-12 text-center">' . $perpageresult . '</div>';
+$output .= '<div id="pagination" style="color:#ea728c; "class="text-center container">' . $perpageresult . '</div>';
 }
 print $output;
 ?>

@@ -14,14 +14,15 @@
     <meta property="og:site_name" content="DotPedia from DotEightPlus" />
     <meta property="og:description" content="Read, Earn, Share" />
     <style>
-        .link {padding: 10px 15px;background: transparent;border:#FFE9E6 1px solid;border-left:0px;cursor:pointer;color:#607d8b}
+        .link {padding: 10px 10px;background: transparent;border:#FFE9E6 1px solid;border-left:0px;cursor:pointer;color:#607d8b}
+
         .disabled {cursor:not-allowed;color: #bccfd8;}
         .current {background: #FFE9E6;}
         .first{border-left:#FFE9E6 1px solid;}
         .question {font-weight:bold;}
         .answer{padding-top: 10px;}
         #pagination{margin-top: 20px;padding-top: 30px;border-top: #ffe9e6 1px solid;}
-        .dot {padding: 10px 15px;background: transparent;border-right: #bccfd8 1px solid;}
+        .dot {padding: 10px 15px;background: transparent;border-right: #ffe9e6 1px solid;}
         #overlay {background-color: rgba(0, 0, 0, 0.6);z-index: 999;position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: none;}
         #overlay div {position:absolute;left:50%;top:50%;margin-top:-32px;margin-left:-32px;}
         .page-content {padding: 20px;margin: 0 auto;}
@@ -307,7 +308,7 @@
 
                 <div class="col-md-12 mt-5" id="latest">
 
-                    <h2 style="color: #ff0000" class="mb-4"><b>Latest PDF(s) </b></h2>
+                    <h2 style="color: #ff0000" class="mb-4 mt-3"><b>Latest PDF(s) </b></h2>
                     <div class="row mb-3 align-items-stretch">
 
                         <div class="page-content">
@@ -333,6 +334,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <?php include("include/footer.php"); ?>
     </div>
