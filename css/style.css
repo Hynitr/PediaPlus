@@ -203,6 +203,19 @@ h5,
   }
 }
 
+
+.btn.btn-signup {
+  color: #ffe9e6;
+  background: #ff0000;
+  border: #ffe9e6;
+  width: 40%;
+}
+@media (max-width: 991.98px) {
+  .btn.btn-signup {
+    width: 100%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .btnnt {
     width: 80%;
@@ -213,6 +226,12 @@ h5,
   color: #fff;
   background: rgba(255, 0, 0, 0.5);
   border: 1px solid #fff;
+}
+
+.btn.btn-signup:hover {
+  color: #ff0000;
+  background: #ffe9e6;
+  border: 1px solid #ff0000;
 }
 
 .btn.btn-outline-primary {

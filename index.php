@@ -3,14 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>DotPedia | Home</title>
-    <meta name="description" content="DotPedia | Home">
-    <meta name="keywords" content="DotPedia, Pdf">
-    <meta property="og:title" content="DotPedia" />
-    <meta property="og:image" content="images/ico.png" />
-    <meta property="og:url" content="https://dotpedia.com.ng" />
-    <meta property="og:site_name" content="DotPedia from DotEightPlus" />
-    <meta property="og:description" content="Read, Earn, Share" />
+    <title>Africa's leading academic resources bank for undergraduates - DotPedia</title>
     <?php include("include/header.php"); ?>
 
     <div class="site-blocks-cover overlay" style="background-image: url(images/bg_4.jpg);" data-aos="fade"
@@ -27,7 +20,7 @@
                                     class="typed-words"></span> <br />AND
                                 SHARE </h1>
                             <p data-aos="fade-up" data-aos-delay="100"><a href="./pdf"
-                                    class="btn btn-primary btn-pill">Download PDFs</a></p>
+                                    class="btn btn-primary btn-pill">Get Started</a></p>
 
                         </div>
                     </div>
@@ -46,7 +39,7 @@
             <div class="row">
                 <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">
                     <h3 style="color: #ff0000" class="mb-3">Getting Started</h3>
-                    <p>Follow our three pretty simple steps in order to download your lecture PDFs</p>
+                    <p class="text-dark">Follow our three pretty simple steps in order to get started</p>
 
                 </div>
                 <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">
@@ -56,8 +49,10 @@
                         <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Create an
                                 Account</a></h3>
                         <div class="block-service-1-excerpt">
-                            <p>Begin by signing up on DotPedia. Activate and verify your email in order to unlock your
-                                5 free pdf credit. </p>
+                            <p class="text-dark">Begin by signing up, sctivate and verify your account in
+                                order to unlock your
+                                <b>5 FREE Pedia Credit.</b>
+                            </p>
                         </div>
                         <p><a href="./signup" class="d-inline-flex align-items-center block-service-1-more"><span>Sign
                                     up now</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>
@@ -70,7 +65,9 @@
                         <h3 style="font-size: 25px;" class="block-service-1-heading mb-3"><a href="#">Get Pedia
                                 Credits</a></h3>
                         <div class="block-service-1-excerpt">
-                            <p>Use your PDF Credit to download Past Questions from DotPedia. Once your Pedia Credit is
+                            <p class="text-dark">Use your PDF Credit to download lecture resources like past questions,
+                                lecture notes,
+                                project topic research e.t.c. Once your Pedia Credit is
                                 exhausted, you`ll be required to buy PDF credits</p>
                         </div>
                         <p><a href="./credit" class="d-inline-flex align-items-center block-service-1-more"><span>Get
@@ -86,10 +83,9 @@
                                 href="./profile#upddate">Donate PDFs</a>
                         </h3>
                         <div class="block-service-1-excerpt">
-                            <p>You can help donate unavailable PDFs on DotPedia. We award donators who donates PDFs,
-                                Past Questions and refer friends on
-                                DotPedia with 1 point. Once you reach a total of 100points, you will
-                                be awarded with NGN1,000.</p>
+                            <p class="text-dark">You can help donate unavailable PDFs. We award donators who donates
+                                PDFs,
+                                Past Questions and refer friends</p>
                         </div>
                         <p><a href="./profile#upddate"
                                 class="d-inline-flex align-items-center block-service-1-more"><span>Doante PDFs</span>
@@ -100,26 +96,27 @@
         </div>
     </div>
 
-    <div class="block-half-content-1 d-block d-lg-flex mt-5">
-        <div class="block-half-content-img" style="background-image: url('images/5.png')">
+    <div class="block-half-content-1 d-block d-lg-flex mt-5 bg-bg">
+        <div class="block-half-content-img" style="background-image: url('images/about.png')">
 
         </div>
         <div class="block-half-content-text bg-bg">
             <div class="block-half-content-text-inner">
                 <h2 class="block-half-content-heading mb-4"></h2>
                 <div class="block-half-content-excerpt">
-                    <p class="lead"><b class="font-weight-bold">READ .:</b> Expand your knowledge bank with PDF's and
-                        Books uploaded by contributors on DotPedia
+                    <p><b class="font-weight-bold">READ .:</b> Enjoy unlimited access to lecture materials,
+                        project research, past questions that are uploaded by Contributors
                     </p>
                     <br />
                     <p>
-                        <b class="font-weight-bold">EARN .:</b> You can make money by uploading unavailable PDF's on
-                        DotPedia.
+                        <b class="font-weight-bold">EARN .:</b> Make money for yourself while on campus by being a
+                        DotPedia Contributor. Help upload lecture materials, past questions or even apply to become a
+                        tutor on DotPedia.
                     </p>
                     <br />
                     <p>
-                        <b class="font-weight-bold">SHARE .:</b> Make even much more money when you refer to a new
-                        student, aspirant, undergraduate or graduate to DotPedia.
+                        <b class="font-weight-bold">SHARE .:</b> Get bonuses when you refer a friend or enemy to enjoy
+                        the benefit of our lecture materials and academic aids.
                     </p>
                 </div>
             </div>
@@ -134,7 +131,7 @@
                                 <span class="block-counter-1-number" data-number="<?php countpdld() ?>">0</span><span
                                     class="append"></span>
                             </div>
-                            <span class="block-counter-1-caption">PDFs Downloads</span>
+                            <span class="block-counter-1-caption">Downloads</span>
                         </div>
                     </div>
 
@@ -144,11 +141,11 @@
                                 <span class="block-counter-1-number" data-number="<?php countupl() ?>">0</span><span
                                     class="append"></span>
                             </div>
-                            <span class="block-counter-1-caption">PDF Materials</span>
+                            <span class="block-counter-1-caption">Materials</span>
                         </div>
                     </div>
 
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 mb-5">
                         <div class="counter">
                             <div class="number-wrap">
                                 <span class="block-counter-1-number" data-number="<?php earning() ?>">0</span><span
@@ -166,7 +163,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    <h2 class="mb-3 mt-0 text-white">Free 5 PDF Credits for First Comers</h2>
+                    <h2 class="mb-3 mt-0 text-white">FREE 5 Pedia Credits for First Comers</h2>
                     <p class="mb-0 text-white lead"></p>
                 </div>
                 <div class="col-lg-4">
@@ -197,7 +194,7 @@
                             <span class="icon icon-phone mr-3"></span>
                             <div class="text">
                                 <strong class="d-block heading">Need Help</strong>
-                                <span class="excerpt"><a href="tel: +2349121087509">+234 912 1087 509</a></span>
+                                <span class="excerpt"><a href="tel: +2349121132025">+234 912 1132 025</a></span>
                             </div>
                         </div>
                     </div>

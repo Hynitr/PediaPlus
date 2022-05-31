@@ -8,14 +8,7 @@ if(isset($_SESSION['login'])) {
 <html lang="en">
 
 <head>
-    <title>DotPedia | Signup</title>
-    <meta name="description" content="DotPedia | Signup">
-    <meta name="keywords" content="DotPedia, Create a free account">
-    <meta property="og:title" content="DotPedia | Signup" />
-    <meta property="og:image" content="images/ico.png" />
-    <meta property="og:url" content="https://dotpedia.com.ng/signup" />
-    <meta property="og:site_name" content="DotPedia from DotEightPlus" />
-    <meta property="og:description" content="Read, Earn, Share" />
+    <title>Create a free account</title>
     <?php include("include/header.php"); ?>
 
     <div class="site-blocks-cover overlay" style="background-image: url(images/bg_4.jpg);" data-aos="fade"
@@ -107,11 +100,12 @@ if(isset($_SESSION['login'])) {
                         </div>
 
 
-                        <div class="mt-5">
-                            <p class="text-center font-weight-bold"><a style="color: #ff0000; cursor: pointer;"
-                                    id="sub">Signup </a>&nbsp; |
+                        <div class="mt-5 justify-content-center text-center">
+                            <p><a style="color: #fff; cursor: pointer;" id="sub" class="btn btn-signup btn-pill">Get
+                                    Started</a></p>
+                            <p class="text-center font-weight-bold">
                                 &nbsp;<a href="./signin" style="color: #000;"> Have an
-                                    Account?</a></p>
+                                    Account? Sign in</a></p>
                         </div>
 
 
