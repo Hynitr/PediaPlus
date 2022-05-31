@@ -11,9 +11,7 @@ if(isset($_SESSION['login'])) {
 <html lang="en">
 
 <head>
-    <title>DotPedia | Sign in</title>
-    <meta name="description" content="DotPedia | Sign in">
-    <meta name="keywords" content="DotPedia, Welcome Back">
+    <title>Welcome Back</title>
     <?php include("include/header.php"); ?>
 
     <div class="site-blocks-cover overlay" style="background-image: url(images/bg_4.jpg);" data-aos="fade"
@@ -54,16 +52,16 @@ if(isset($_SESSION['login'])) {
                             </div>
                         </div>
 
-
-                        <div class="mt-5">
-                            <p class="text-center font-weight-bold"><a style="color: #ff0000; cursor: pointer;"
-                                    id="signin">Sign In
+                        <div class="mt-5 justify-content-center text-center">
+                            <p><a style="color: #fff; cursor: pointer;" id="signin" class="btn btn-signup btn-pill">Sign
+                                    me
+                                    in</a></p>
+                            <p class="text-center font-weight-bold"><a href="./signup"
+                                    style="color: #ff0000; cursor: pointer;">Create
+                                    an account
                                 </a>&nbsp; |
-                                &nbsp;<a href="./forgot" style="color: #000;"> Forgot Password?</a></p>
+                                &nbsp;<a href="./forgot" style="color: #ff0000;"> Forgot Password?</a></p>
                         </div>
-
-
-
 
                     </form>
                 </div>
@@ -77,7 +75,7 @@ if(isset($_SESSION['login'])) {
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter">
+    <div class=" modal fade" id="exampleModalCenter">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div style="background: #FFE9E6; color: #ff0000; border-radius: 0px 40px 0px 40px;" class="modal-content">
                 <div class="modal-body">

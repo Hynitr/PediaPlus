@@ -75,6 +75,7 @@ $(document).ready(function () {
       if (password == "" || password == null) {
         $("#msg").html("Your password is empty");
       } else {
+        $("#msg").html("Loading... Please wait");
         $.ajax({
           type: "post",
           url: "functions/init.php",
@@ -351,20 +352,16 @@ $(document).ready(function () {
     xhr.send();
   });
 
-/**WITHDRAW FUNDS */
-$("#withdraw").click(function () {
-var point = $("#vall").text();
+  /**WITHDRAW FUNDS */
+  $("#withdraw").click(function () {
+    var point = $("#vall").text();
 
-if(point <= 99){
-  alert("The minimum withdrawal is NGN1,000");
+    if (point <= 99) {
+      alert("The minimum withdrawal is NGN1,000");
+    } else {
+      alert("You have been scheduled for withdrawal");
+    }
+  });
 
-} else {
-
-alert("You have been scheduled for withdrawal");
-}
-});
-
-
-/**BUY PEDIA CREDIT */
-
+  /**BUY PEDIA CREDIT */
 });

@@ -1,8 +1,12 @@
 <?php include("functions/init.php");
+
+//check if session for login is set.
 if(isset($_SESSION['login'])) {
 
     unset($_SESSION['login']);
 }
+
+//chck if verification link was sent
 if(!isset($_GET['vef'])) {
 
     redirect("./signup");
@@ -14,29 +18,43 @@ if(!isset($_GET['vef'])) {
     $sql = "SELECT * FROM signup WHERE `activator` = '$data'";
     $rsl = query($sql);
     
-    if(row_count($rsl) == 1) {
+    if(row_count($rsl) == null) {
+
+        redirect("./signup");
+
+    } else {
+        
 
     $row = mysqli_fetch_array($rsl);
 
     $fnam = $row['usname'];
     $ref  = $row['ref'];
 
-    if($ref == "seyibabs" || $ref == "smilegist") {
+
+    //promotion link
+    /*if($ref == "seyibabs" || $ref == "smilegist") {
 
         $cred = '100';
 
     } else {
 
         $cred = '5';
-    }
+    }*/
    
+    $cred = '5';
+    
     //update active to 1
     $ssl = "UPDATE signup SET `active` = '1', `activator` = '', `pdfcredit` = '$cred', `withdraw` = '0', `pvf` = '0' WHERE `activator` = '$data'";
     $res = query($ssl);
+    
 
-    } else {
+    //create a new login session and redirect user
+    $_SESSION['login'] = $row['usname'];
 
-        redirect("./signup");
+    if(isset($_SESSION['login']) == $row['usname']) {
+    redirect("./profile");
+    }
+        
     }
 }
 ?>
@@ -62,9 +80,9 @@ if(!isset($_GET['vef'])) {
                             </h1>
                         </div>
                     </div>
-                    <p data-aos="fade-up" data-aos-delay="100"><a href="./logout" class="btn btn-primary btn-pill">Sign
-                            in
-                            to continue</a></p>
+                    <p data-aos="fade-up" data-aos-delay="100"><a href="./logout" class="">You will be redirected to
+                            your
+                            profile in the next 10 seconds</a></p>
                 </div>
             </div>
         </div>
