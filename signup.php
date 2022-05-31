@@ -39,23 +39,23 @@ if(isset($_SESSION['login'])) {
                     <form>
                         <div class="row form-group">
                             <div class="col-md-6 mt-4">
-                                <label for="fname">Full Name</label>
+                                <label for="fname">Full Name <sup style="color: #ff0000">*</sup></label>
                                 <input type="text" id="fname" class="form-control" placeholder="Input Your Full Name">
                             </div>
                             <div class="col-md-6 mt-4">
-                                <label for="lname">Create a username</label>
+                                <label for="lname">Create a username <sup style="color: #ff0000">*</sup></label>
                                 <input type="text" id="usname" class="form-control" placeholder="Create your username">
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-6 mt-4">
-                                <label for="email">Email</label>
+                                <label for="email">Email <sup style="color: #ff0000">*</sup></label>
                                 <input type="email" id="email" class="form-control"
                                     placeholder="Input your email address">
                             </div>
                             <div class="col-md-6 mt-4">
-                                <label for="email">Telephone</label>
+                                <label for="email">Telephone <sup style="color: #ff0000">*</sup></label>
                                 <input type="number" id="tel" class="form-control"
                                     placeholder="Input your telephone number">
                             </div>
@@ -63,7 +63,7 @@ if(isset($_SESSION['login'])) {
 
                         <div class="row form-group">
                             <div class="col-md-12 mt-4">
-                                <label for="subject">Institution</label>
+                                <label for="subject">Institution <sup style="color: #ff0000">*</sup></label>
                                 <input type="text" id="inst" class="form-control"
                                     placeholder="Input your institution name">
                             </div>
@@ -89,11 +89,11 @@ if(isset($_SESSION['login'])) {
 
                         <div class="row form-group">
                             <div class="col-md-6 mt-4">
-                                <label for="pword">Create a password</label>
+                                <label for="pword">Create a password <sup style="color: #ff0000">*</sup></label>
                                 <input type="password" id="pword" class="form-control" placeholder="Create a password">
                             </div>
                             <div class="col-md-6 mt-4">
-                                <label for="cpword">Confirm Password</label>
+                                <label for="cpword">Confirm Password <sup style="color: #ff0000">*</sup></label>
                                 <input type="password" id="cpword" class="form-control"
                                     placeholder="Re-type your password here">
                             </div>
